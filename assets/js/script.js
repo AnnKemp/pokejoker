@@ -3,6 +3,8 @@
 //fetch JSON
 async function getPokemon(name) {
 
+//empty moves array every time you search for new pokemon
+   // array.length = 0;
 //if input is empty alert the user to enter a pokemon name
     //   if(name === ""){
     //       alert('type in a pokemon name!')
@@ -22,8 +24,6 @@ async function getPokemon(name) {
 
         let randomSprite = [];
         randomSprite[i] = Math.floor(Math.random() * 151) + 1; // returns a random integer from 1 to 151
-
-        getPokemon(randomSprite); // viermaal een randomwaarde ophalen
     }
 let ImageIndex = randomSprite[Math.floor(Math.random() * 5)]; // to select the image to show
         //ImageIndex.......sprites.front_default;
@@ -36,7 +36,7 @@ let ImageIndex = randomSprite[Math.floor(Math.random() * 5)]; // to select the i
         document.getElementsByClassName("namePoke");innerHTML= randomSprite.filter(same);
     }*/
 }
-getPokemon(randomSprite);
+getPokemon(151);
 
 
 
