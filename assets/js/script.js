@@ -1,6 +1,3 @@
-
-
-
 //document.getElementById('inputBtn').addEventListener('click', function getName(){
 
 //fetch JSON
@@ -26,8 +23,18 @@ async function getPokemon(name) {
         let randomSprite = [];
         randomSprite[i] = Math.floor(Math.random() * 151) + 1; // returns a random integer from 1 to 151
 
-        let ImageValue = randomSprite[i]; // beeld om te tonen
+        getPokemon(randomSprite); // viermaal een randomwaarde ophalen
     }
+let ImageIndex = randomSprite[Math.floor(Math.random() * 5)]; // to select the image to show
+        //ImageIndex.......sprites.front_default;
+
+   /* function same(randomSprite[i]) {
+        return randomSprite[i] !== ImageValue;
+    }
+
+    function myFunction() {
+        document.getElementsByClassName("namePoke");innerHTML= randomSprite.filter(same);
+    }*/
 }
 getPokemon(randomSprite);
 
