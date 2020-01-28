@@ -26,7 +26,7 @@ async function insults(lala) {
         setTimeout(type, 100);
     }());
 azeazeaze
-
+iehdneqwjdoqwdj
 }
 
 insults();
