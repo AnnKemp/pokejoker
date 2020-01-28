@@ -4,6 +4,7 @@
 
 body {
   font-family: "LoRes 12 OT";
+  background: url("../img/used/bg_bg.svg");
 }
 
 @font-face {
