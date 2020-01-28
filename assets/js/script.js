@@ -80,6 +80,9 @@ getPokemon(); // call the function
     // het vergelijken of er twee van die 4 randomwaarden hetzelfde zijn heb ik nog niet gedaan
     function same(randomSprite[i]) {
      return randomSprite[i] !== ImageValue; // zoiets
+
+
+     // misschien nog aanpassen als je de constante arrays met data hebt gevuld dat je dan door de fetch geen foutmeldingen meer krijgt!
 */
 
 })();
