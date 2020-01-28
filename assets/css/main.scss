@@ -1,0 +1,48 @@
+*{
+  margin:0;
+
+}
+
+body{
+  font-family: "LoRes 12 OT";
+}
+@font-face {
+  font-family: "LoRes";
+  src: url("../fonts/LoRes12OT-BoldAltOakland.ttf");
+  font-style: normal;
+  font-weight: 100;
+}
+
+.guessPokemon{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  .whichPokemon{
+    grid-column: 1/2;
+    grid-row:1/3;
+      .questionMark{
+      font-size: 75vmin;
+      }
+    }
+
+  .guess{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    display: block;
+    .guessButton{
+      width: 80%;
+      margin: 3vmin;
+      display: block;
+      background-image: url("../img/used/bg_bg.svg");
+    }
+  }
+  .hiddenPokemon{
+    grid-column: 3/4;
+    grid-row: 1/3;
+
+  }
+
+}
+
+
+
