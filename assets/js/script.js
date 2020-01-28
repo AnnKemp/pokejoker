@@ -1,6 +1,6 @@
 (() => {
     // initialise vars
-    let ImageIndex;
+    let ImageIndex=0;
     let randomSprite = [];
 
 //fetch JSON
@@ -23,27 +23,34 @@ async function getPokemon() {
     for (let y = 0; y < 4; y++) {
         document.querySelectorAll(".guessButton")[y].innerHTML= pObject.results[randomSprite[y+1]].name;
     }
+
+    // to generate a random number between 0 and 4 to select the random id of the image we are going to show
+    let randomGetal = Math.floor(Math.random() * 5); // this works fine!
+
+    ImageIndex = randomSprite[randomGetal]; // to select the random image to show from the four selected pokemons
+
+    getPokemonImage(ImageIndex);
+    console.log(ImageIndex); // to test which numbers don't give an image and to solve this problem
+
     //return pObject; // release the data
 }
 
 getPokemon(); // call the function
 
   //console.log(pObject); // testing in the console dus met ne return krijg ik de pObject data niet uit de functie ???!!! why?!!!
-
-    // to generate a random number between 0 and 4 to select the random id of the image we are going to show
-    let randomGetal = Math.floor(Math.random() * 5); // this works fine!
-
-   // ImageIndex = randomSprite[randomGetal]; // to select the random image to show from the four
-
-  async function getPokemonImage(name) {
+    async function getPokemonImage(name) {
         //fetch stream of data
         const pokemonImage = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
         const pImage = await pokemonImage.json();
-      //  console.log(pImage.sprites.front_default);  // this works
-      document.querySelector(".PokemonIcon").src=pImage.sprites.front_default;    // this works!
+        //  console.log(pImage.sprites.front_default);  // this works
+        document.querySelector(".PokemonIcon").src=pImage.sprites.front_default;    // this works!
     }
 
-    getPokemonImage(55);
+
+
+
+
+
 
 
     //ImageIndex.
