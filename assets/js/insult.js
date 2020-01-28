@@ -25,7 +25,7 @@ async function insults(lala) {
         if (isTag) return type();
         setTimeout(type, 100);
     }());
-
+azeazeaze
 
 }
 
