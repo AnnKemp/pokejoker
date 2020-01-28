@@ -30,7 +30,7 @@ body h1 {
 .guessPokemon {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 .guessPokemon .whichPokemon {
   grid-column: 1/2;
@@ -48,7 +48,7 @@ body h1 {
 }
 .guessPokemon .guess .guessButton {
   width: 90%;
-  margin: 3vmin;
+  margin: 5px;
   padding: 3vmin;
   display: block;
   background-image: url("../img/used/guessbtn_guess buttonn.svg");
@@ -66,36 +66,42 @@ body h1 {
 
 .catchPokemon {
   width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
 }
-.catchPokemon .catch {
-  display: flex;
+.catchPokemon h1 {
+  grid-column: 1/3;
+  display: block;
 }
-.catchPokemon .catch .PokemonIcon {
+.catchPokemon .PokemonIcon {
   justify-content: flex-end;
   width: 20%;
+  grid-column: 2/3;
 }
-.catchPokemon .catch #ashIcon {
+.catchPokemon #ashIcon {
   justify-content: flex-start;
   width: 20%;
 }
-.catchPokemon .catch #fightItem {
+.catchPokemon #fightItem {
   visibility: hidden;
 }
 
 .textMenu {
+  margin: auto;
+  margin-top: -12vmin;
   width: 100vmin;
   background-image: url("../img/used/guessbtn_guess buttonn.svg");
+  background-position: center;
   background-repeat: no-repeat;
+  justify-content: center;
 }
 .textMenu .menuText {
-  position: relative;
   text-align: left;
-  margin-left: 2vmin;
+  margin-left: 30vmin;
+  margin-top: 10vmin;
   width: 70%;
-  padding: 7vmin;
-}
-.textMenu .insult {
-  visibility: hidden;
+  padding: 2vmin;
 }
 
 /*# sourceMappingURL=main.css.map */
