@@ -51,9 +51,10 @@
 getPokemon(); // call the function
 
   //console.log(pObject); // testing in the console dus met ne return krijg ik de pObject data niet uit de functie ???!!! why?!!!
+
     async function getPokemonImage(name) {
        try {
-             //fetch stream of data
+             //fetch stream of data to get the images
             const pokemonImage = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
             const pImage = await pokemonImage.json();
 
