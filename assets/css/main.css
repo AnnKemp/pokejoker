@@ -4,17 +4,25 @@
 * *:focus {
   outline: none;
 }
-
-body {
-  font-family: "LoRes 12 OT", sans-serif;
-  background: url("../img/used/bg_bg.svg");
+/*  --voorbeeld
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
 }
 
-@font-face {
-  font-family: "LoRes";
-  src: url("../fonts/LoRes12OT-BoldAltOakland.ttf");
+div {
+  font-family: myFirstFont;
+}*/
+
+body {
+  font-family: LoRes, sans-serif;
+  background: url("../img/used/bg_bg.svg");
   font-style: normal;
-  font-weight: 100;
+  font-weight: 100;}
+
+@font-face {
+  font-family: LoRes;
+  src: url("../fonts/LoRes12OT-BoldAltOakland.ttf");
 }
 .guessPokemon {
   display: grid;
