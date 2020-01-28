@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "LoRes 12 OT";
+  font-family: "LoRes 12 OT", sans-serif;
   background: url("../img/used/bg_bg.svg");
 }
 
@@ -41,6 +41,10 @@ body {
   background-color: rgba(148, 225, 255, 0);
   border: none;
   background-position: center center;
+  font-family: "LoRes 12 OT", sans-serif;
+}
+.guessPokemon .guess .guessButton .guessbutton:focus {
+  outline: 0;
 }
 .guessPokemon .hiddenPokemon {
   grid-column: 3/4;
