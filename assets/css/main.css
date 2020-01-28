@@ -4,6 +4,7 @@
 
 body {
   font-family: "LoRes 12 OT";
+  background: url("../img/used/bg_bg.svg");
 }
 
 @font-face {
@@ -26,14 +27,20 @@ body {
 }
 .guessPokemon .guess {
   grid-column: 2/3;
-  grid-row: 1/3;
+  grid-row: 2/3;
   display: block;
+  justify-content: center;
 }
 .guessPokemon .guess .guessButton {
-  width: 80%;
+  width: 90%;
   margin: 3vmin;
+  padding: 3vmin;
   display: block;
-  background-image: url("../img/used/bg_bg.svg");
+  background-image: url("../img/used/guessbtn_guess buttonn.svg");
+  background-repeat: no-repeat;
+  background-color: rgba(148, 225, 255, 0);
+  border: none;
+  background-position: center center;
 }
 .guessPokemon .hiddenPokemon {
   grid-column: 3/4;
