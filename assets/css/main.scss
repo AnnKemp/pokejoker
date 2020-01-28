@@ -4,15 +4,18 @@
     outline: none;
   }
 }
-img{
-  width: 90%;
+.PokemonIcon{
+  width:70vmin;
 }
 body{
   font-family: "LoRes 12 OT", sans-serif;
   background: url("../img/used/bg_bg.svg");
   background-repeat: no-repeat;
   height: 100%;
-
+h1{
+  text-align: center;
+  margin-top: 2vmin;
+}
 }
 @font-face {
   font-family: "LoRes";

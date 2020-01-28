@@ -5,8 +5,8 @@
   outline: none;
 }
 
-img {
-  width: 90%;
+.PokemonIcon {
+  width: 70vmin;
 }
 
 body {
@@ -14,6 +14,10 @@ body {
   background: url("../img/used/bg_bg.svg");
   background-repeat: no-repeat;
   height: 100%;
+}
+body h1 {
+  text-align: center;
+  margin-top: 2vmin;
 }
 
 @font-face {
