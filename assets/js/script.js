@@ -2,6 +2,8 @@
     // initialise vars
     let ImageIndex=0;
     let randomSprite = [];
+    const data = []; // constant array to save/keep all the feched data in from the first fetch to reuse x-times in the site/document
+    const keepImage=[]; // constant array to save/keep all the feched data in from the second fetch to reuse x-times in the site/document
 
     //fetch JSON
     async function getPokemon() {
@@ -12,17 +14,22 @@
 
         //convert to json
         const pObject = await pokemonPlain.json();
-        console.log(pObject); // testing in the console
+        //console.log(pObject); // testing in the console
+
+            // push the fetched data in the constant array to reuse and keep so you do not need to fetch X-times anymore
+            data.push(pObject);
+            //console.log(data); // testing in the console
 
         // generate 4 random numbers to use as random id's to select 4 random pokemons
          for (let i = 1; i <= 4; i++) {
             randomSprite[i] = Math.floor(Math.random() * 151) + 1;     // returns a random integer from 1 to 151
-             console.log(randomSprite[i]); // this works fine
+             //console.log(randomSprite[i]); // this works fine
          }
 
          // select buttons to display 4 random pokemon names   ---this works!
          for (let y = 0; y < 4; y++) {
-             document.querySelectorAll(".guessButton")[y].innerHTML = pObject.results[randomSprite[y + 1]].name;
+             //console.log(data[0].results[randomSprite[y + 1]].name);
+             document.querySelectorAll(".guessButton")[y].innerHTML = data[0].results[randomSprite[y + 1]].name;
          }
 
          // to generate a random number between 0 and 4 to select the random id of the image we are going to show
@@ -40,6 +47,7 @@
         console.log("error by fetching the name- and id-data");
     }
 }
+//--------------------------------------------end of asynchron function one ------------------------------------------------------------------------------------------
 getPokemon(); // call the function
 
   //console.log(pObject); // testing in the console dus met ne return krijg ik de pObject data niet uit de functie ???!!! why?!!!
@@ -53,9 +61,13 @@ getPokemon(); // call the function
             //console.log(pImage.name);  // testing
             //console.log(pImage.id);   // testing
 
+           // fill a constant array to keep/save the data so you don't need to fetch x-times anymore, only one time a day
+           keepImage.push(pImage);
+          // console.log(keepImage);  testing . . .
+
             // show the images corresponding to the name and id in the html
-           document.getElementsByClassName("PokemonIcon")[0].src= pImage.sprites.front_default;
-           document.getElementsByClassName("PokemonIcon")[1].src= pImage.sprites.front_default;
+           document.getElementsByClassName("PokemonIcon")[0].src= keepImage[0].sprites.front_default;
+           document.getElementsByClassName("PokemonIcon")[1].src= keepImage[0].sprites.front_default;
           // document.querySelector(".PokemonIcon").src = pImage.sprites.front_default;    // this works! but not for more then one!
 
         } catch (error) {
@@ -64,12 +76,9 @@ getPokemon(); // call the function
     }
 
     /* todo list
-    // het vergelijken of er twee van die randomwaarde hetzelfde zijn heb ik nog niet gedaan
+    // het vergelijken of er twee van die 4 randomwaarden hetzelfde zijn heb ik nog niet gedaan
     function same(randomSprite[i]) {
      return randomSprite[i] !== ImageValue; // zoiets
-
-     //na die eerste fetch de data in een array steken zodat die constant bereikbaar zijn heb ik nog niet gedaan
-     // zo ook voor de tweede fetch
 */
 
 })();
