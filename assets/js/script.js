@@ -53,19 +53,20 @@ getPokemon(); // call the function
             //console.log(pImage.name);  // testing
             //console.log(pImage.id);   // testing
 
+            // show the images corresponding to the name and id in the html
            document.getElementsByClassName("PokemonIcon")[0].src= pImage.sprites.front_default;
            document.getElementsByClassName("PokemonIcon")[1].src= pImage.sprites.front_default;
           // document.querySelector(".PokemonIcon").src = pImage.sprites.front_default;    // this works! but not for more then one!
 
         } catch (error) {
-          console.log("error by fetching the image-data or selecting the image out of the data to show in the html");
+          console.log("error by fetching the image-data or selecting the image out of the data to show it in the html");
         }
     }
 
     /* todo list
     // het vergelijken of er twee van die randomwaarde hetzelfde zijn heb ik nog niet gedaan
     function same(randomSprite[i]) {
-     return randomSprite[i] !== ImageValue;
+     return randomSprite[i] !== ImageValue; // zoiets
 
      //na die eerste fetch de data in een array steken zodat die constant bereikbaar zijn heb ik nog niet gedaan
      // zo ook voor de tweede fetch
