@@ -1,6 +1,8 @@
 *{
   margin:0;
-
+  *:focus {
+    outline: none;
+  }
 }
 
 body{
@@ -14,24 +16,27 @@ body{
   font-weight: 100;
 }
 
-.guessPokemon{
+.guessPokemon {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  .whichPokemon{
-    grid-column: 1/2;
-    grid-row:1/3;
-      .questionMark{
-      font-size: 75vmin;
-      }
-    }
 
-  .guess{
+  .whichPokemon {
+    grid-column: 1/2;
+    grid-row: 1/3;
+
+    .questionMark {
+      font-size: 75vmin;
+    }
+  }
+
+  .guess {
     grid-column: 2/3;
     grid-row: 2/3;
     display: block;
-   justify-content: center;
-    .guessButton{
+    justify-content: center;
+
+    .guessButton {
       width: 90%;
       margin: 3vmin;
       padding: 3vmin;
@@ -42,15 +47,16 @@ body{
       border: none;
       background-position: center center;
       font-family: "LoRes 12 OT", sans-serif;
-      .guessButton:focus {outline:0;}
+
     }
-  }
-  .hiddenPokemon{
-    grid-column: 3/4;
-    grid-row: 1/3;
+
+    .hiddenPokemon {
+      grid-column: 3/4;
+      grid-row: 1/3;
+
+    }
 
   }
-
 }
 
 
