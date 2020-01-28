@@ -11,25 +11,27 @@ async function getPokemon() {
 
 //convert to json
     const pObject = await pokemonPlain.json();
-    console.log(pObject); // testing in the console
+   console.log(pObject); // testing in the console
 
-    return pObject; // release the data
+    console.log(pObject.results[0].name);
+    // generate 4 random numbers to use as random id's to select 4 random pokemons
+    for (let i = 1; i <= 4; i++) {
+        randomSprite[i] = Math.floor(Math.random() * 151) + 1;     // returns a random integer from 1 to 151
+        // console.log(randomSprite[i] ); // this works fine
+    }
+
+    // select buttons to display 4 random pokemon names
+    for (let y = 0; y < 4; y++) {
+        document.querySelectorAll(".guessButton")[y].innerHTML= pObject.results[randomSprite[y+1]].name;
+    }
+    //return pObject; // release the data
 }
 
 getPokemon(); // call the function
 
-   // console.log(pObject); // testing in the console
+  //console.log(pObject); // testing in the console
 
-// generate 4 random numbers to use as random id's to select 4 random pokemons
-    for (let i = 1; i <= 4; i++) {
-        randomSprite[i] = Math.floor(Math.random() * 151) + 1;     // returns a random integer from 1 to 151
-     // console.log( randomSprite[i] ); // this works fine
-    }
 
-    // select buttons to display 4 random pokemon names
-   for (let y = 0; y < 4; y++) {
-       document.querySelectorAll(".guessButton")[y].innerHTML= randomSprite[y+1];
-      }
     // to generate a random number between 0 and 4 to select the random id of the image we are going to show
     let randomGetal = Math.floor(Math.random() * 5); // this works fine!
     // console.log(randomGetal);
