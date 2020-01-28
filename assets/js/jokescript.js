@@ -19,7 +19,7 @@ function joke(divInput){
 
 
 
-azeazeaze
+
 document.getElementById("pokeGuess1").addEventListener("click",function () {
     joke();
 });
