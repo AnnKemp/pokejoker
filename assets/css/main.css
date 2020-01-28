@@ -43,7 +43,7 @@ body {
   background-position: center center;
   font-family: "LoRes 12 OT", sans-serif;
 }
-.guessPokemon .guess .guessButton .guessbutton:focus {
+.guessPokemon .guess .guessButton .guessButton:focus {
   outline: 0;
 }
 .guessPokemon .hiddenPokemon {
