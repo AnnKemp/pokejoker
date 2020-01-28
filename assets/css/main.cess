@@ -5,10 +5,6 @@
   outline: none;
 }
 
-img {
-  width: 90%;
-}
-
 body {
   font-family: "LoRes 12 OT", sans-serif;
   background: url("../img/used/bg_bg.svg");
@@ -62,8 +58,7 @@ body {
 .catchPokemon {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  justify-content: flex-end;
+  grid-template-rows: 1fr 1fr;
 }
 .catchPokemon .catch {
   display: grid;
@@ -83,18 +78,15 @@ body {
 .catchPokemon .catch #fightItem {
   visibility: hidden;
 }
-
-.textMenu {
-  width: 100vmin;
-  background-image: url("../img/used/guessbtn_guess buttonn.svg");
-  background-repeat: no-repeat;
+.catchPokemon .textMenu {
+  width: 90%;
 }
-.textMenu .menuText {
-  position: relative;
-  text-align: left;
-  margin-left: 2vmin;
-  width: 70%;
-  padding: 7vmin;
+.catchPokemon .textMenu .menuText {
+  /*background-image: url("../img/used/guessbtn_guess buttonn.svg");*/
+  background-color: red;
+  height: 100px;
+  width: 90%;
+  border: 5px red solid;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.cess.map */
