@@ -4,8 +4,9 @@
     outline: none;
   }
 }
-.PokemonIcon{
+#hidePokemon{
   width:70vmin;
+  filter: brightness(0);
 }
 body{
   font-family: "LoRes 12 OT", sans-serif;
@@ -71,24 +72,20 @@ h1{
 
 
 .catchPokemon{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  justify-content: flex-end;
-
+width: 90%;
       .catch{
-          display: grid;
-          grid-column: 1/3;
-          grid-row: 1/2;
-            .pokemonIcon {
-                justify-content: flex-end;
+        display: flex;
+
+            .PokemonIcon {
+              justify-content: flex-end;
+
                 width: 20%;
-                grid-column: 2/3;
+
               }
             #ashIcon{
                 justify-content: flex-start;
-                width: 40%;
-                grid-column: 1/2;
+                width: 20%;
+
               }
 
             #fightItem{
@@ -106,6 +103,10 @@ h1{
     margin-left: 2vmin;
     width: 70%;
     padding: 7vmin;
+  }
+
+  .insult{
+    visibility: hidden;
   }
 }
 
