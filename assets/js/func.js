@@ -44,7 +44,7 @@
             }
             showWeapons();
 
-            document.querySelector(".PokemonIcon").addEventListener("click", function(){
+            document.querySelector("#secondPicture").addEventListener("click", function(){
                 document.querySelector("#jokeText").style.display="block";
 
             });
