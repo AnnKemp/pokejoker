@@ -6,8 +6,10 @@
 }
 
 #hidePokemon {
-  width: 90%;
+  width: 30%;
   filter: brightness(0);
+  top: 10%;
+  position: absolute;
 }
 
 img {
@@ -46,8 +48,8 @@ body h1 {
   grid-row: 1/3;
 }
 .guessPokemon .whichPokemon .questionMark {
-  font-size: 25vw;
-  left: 13%;
+  font-size: 29vw;
+  left: 10%;
   position: absolute;
   top: 10%;
 }
