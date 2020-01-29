@@ -13,10 +13,12 @@ body{
   background: url("../img/used/bg_bg.svg");
   background-repeat: no-repeat;
   height: 100%;
+  background-size: cover;
+
 h1{
   text-align: center;
   margin-top: 2vmin;
-
+  font-size: 15px;
 }
 }
 @font-face {
@@ -24,6 +26,7 @@ h1{
   src: url("../fonts/LoRes12OT-BoldAltOakland.ttf");
   font-style: normal;
   font-weight: 100;
+
 }
 
 .guessPokemon {

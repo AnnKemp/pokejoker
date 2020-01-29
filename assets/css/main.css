@@ -15,10 +15,12 @@ body {
   background: url("../img/used/bg_bg.svg");
   background-repeat: no-repeat;
   height: 100%;
+  background-size: cover;
 }
 body h1 {
   text-align: center;
   margin-top: 2vmin;
+  font-size: 15px;
 }
 
 @font-face {
