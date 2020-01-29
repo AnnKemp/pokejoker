@@ -16,6 +16,7 @@ img{
   image-rendering: crisp-edges;
   image-rendering: pixelated;}
 body{
+
   font-family: LoRes, sans-serif;
   background: url("../img/used/bg_bg.svg");
   background-repeat: no-repeat;
@@ -174,6 +175,10 @@ button:hover  {
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: grey; }
+  0% { border-color: grey; }
 }
 
+#rock:hover {
+
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/sad.png"), auto;
+}
