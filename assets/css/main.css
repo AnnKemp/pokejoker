@@ -6,16 +6,18 @@
 }
 
 #hidePokemon {
-  width: 70vmin;
+  min-width: 70vmin;
   filter: brightness(0);
 }
 
 body {
-  font-family: "LoRes 12 OT", sans-serif;
+  font-family: LoRes, sans-serif;
   background: url("../img/used/bg_bg.svg");
   background-repeat: no-repeat;
   height: 100%;
   background-size: cover;
+  font-style: normal;
+  font-weight: 100;
 }
 body h1 {
   text-align: center;
@@ -24,10 +26,8 @@ body h1 {
 }
 
 @font-face {
-  font-family: "LoRes";
+  font-family: LoRes;
   src: url("../fonts/LoRes12OT-BoldAltOakland.ttf");
-  font-style: normal;
-  font-weight: 100;
 }
 .guessPokemon {
   display: grid;
