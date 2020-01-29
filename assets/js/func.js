@@ -4,7 +4,6 @@
 
   for(let i=0;i<4 ;i++) {
 
-
       document.getElementsByClassName("guessButton")[i].addEventListener("click", function(){
 
         document.getElementById("lala").innerHTML="There is a wild pokemon rapidly coming towards you, wich one is it?";
@@ -13,7 +12,6 @@
 
       checkName(Name);
       });
-
       }
 
       function checkName(Name){
@@ -21,52 +19,44 @@
           // Retrieve data from session
           let ImageIndexName= sessionStorage.getItem("nameImage");
 
-
-          //console.log(ImageIndexName);
-
         if(Name == ImageIndexName) {
-
+                // clear animated sentence
             document.getElementById("lala").innerHTML=" ";
 
+            // hide screen 1
             document.querySelector(".guessPokemon").style.display="none";
+
+            // show screen 2
             document.querySelector(".catchIt").style.display="block";
+            // adjust name of pokemon in the second screen
             document.querySelector("#pokeId").innerHTML=Name;
+            // hide weapons temporaly
+            document.querySelector(".chooseItem").style.display="none";
+
+            let weapon;
+
+            function showWeapons() {
+                weapon = setTimeout(weaponFunc, 2000);
+            }
+            function weaponFunc() {
+                document.querySelector(".chooseItem").style.display="block";
+            }
+            showWeapons();
+
+
 
        }else{
             document.getElementById("lala").innerHTML="you missed!";
 
             let myVar;
 
-            function myFunction() {
-                myVar = setTimeout(bannerFunc, 1300);
-            }
-            function bannerFunc() {
-                document.getElementById("lala").innerHTML="There is a wild pokemon rapidly coming towards you, wich one is it?";
-            }
-
-            myFunction();
-        }
+                 function myFunction() {
+                      myVar = setTimeout(bannerFunc, 1000);
+                 }
+                    function bannerFunc() {
+                        document.getElementById("lala").innerHTML="There is a wild pokemon rapidly coming towards you, wich one is it?";
+                    }
+                  myFunction();
+             }
       }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 })();
