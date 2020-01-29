@@ -108,8 +108,14 @@ body h1 {
   grid-column: 1/3;
   display: block;
 }
-.catchPokemon #ashIcon {
+.catchPokemon {
   width: 20%;
+  grid-column: 1/2;
+  margin-left: 20vmin;
+}
+img#ashIcon{
+  width:200px;
+  height: 200px;
   grid-column: 1/2;
   margin-left: 20vmin;
 }
