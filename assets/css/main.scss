@@ -10,7 +10,10 @@
 
 }
 
-
+img{
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;}
 body{
   font-family: LoRes, sans-serif;
   background: url("../img/used/bg_bg.svg");
