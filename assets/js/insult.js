@@ -23,7 +23,7 @@ async function insults(lala) {
         if( char === '>' ) isTag = false;
 
         if (isTag) return type();
-        setTimeout(type, 100);
+        setTimeout(type, 500);
     }());
 
 }

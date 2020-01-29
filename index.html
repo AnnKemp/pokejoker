@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <h1 id="lala">There is a wild pokemon rapidly coming towards you, wich one is it?</h1>
 <section class="guessPokemon">
 
@@ -22,17 +23,17 @@
     </section>
 
     <section class="guess">
-        <button class="guessButton" id="pokeGuess1"></button>
-        <button class="guessButton" id="pokeGuess2"></button>
-        <button class="guessButton" id="pokeGuess3"></button>
-        <button class="guessButton" id="pokeGuess4"></button>
+        <button value="PLAY" onclick="play()" class="guessButton" id="pokeGuess1"></button>
+        <button value="PLAY" onclick="play()" class="guessButton" id="pokeGuess2"></button>
+        <button value="PLAY" onclick="play()" class="guessButton" id="pokeGuess3"></button>
+        <button value="PLAY" onclick="play()" class="guessButton" id="pokeGuess4"></button>
     </section>
 
     <section class="hiddenPokemon">
     <img src="" alt="guessPokeIcon" id="hidePokemon" class="PokemonIcon">
     </section>
 </section>
-
+<audio id="audio" src="http://23.237.126.42/ost/pokemon-original-game-soundtrack/wahjdqip/101%20-%20opening.mp3"></audio>
 <section class="catchIt">
     <section class="catchPokemon">
         <h1>A wild <span id="pokeId">pokemon</span> appeared!</h1>

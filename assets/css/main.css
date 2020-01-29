@@ -5,6 +5,23 @@
   outline: none;
 }
 
+#secondPicture {
+  width: 30%;
+  margin-top: 40%;
+}
+
+.text {
+  display: inline-block;
+  margin: 10px 10px;
+  padding-inline: 10%;
+}
+
+ul li {
+  display: inline-block;
+  margin: 10px 10px;
+  padding-inline: 10%;
+}
+
 #hidePokemon {
   width: 30%;
   filter: brightness(0);
@@ -16,11 +33,6 @@ img {
   image-rendering: auto;
   image-rendering: crisp-edges;
   image-rendering: pixelated;
-}
-
-img#secondPicture{
-  width:400px;
-  height:400px;
 }
 
 body {
@@ -108,16 +120,12 @@ body h1 {
   grid-column: 1/3;
   display: block;
 }
-.catchPokemon {
+.catchPokemon #ashIcon {
   width: 20%;
   grid-column: 1/2;
-  margin-left: 20vmin;
-}
-img#ashIcon{
-  width:200px;
-  height: 200px;
-  grid-column: 1/2;
-  margin-left: 20vmin;
+  margin-left: 65%;
+  z-index: -2;
+  margin-top: 50%;
 }
 .catchPokemon .PokemonIcon {
   width: 20%;
@@ -135,7 +143,6 @@ img#ashIcon{
   background-position: center;
   background-repeat: no-repeat;
   justify-content: center;
-  border: red 1px solid;
 }
 .textMenu .menuText {
   text-align: left;

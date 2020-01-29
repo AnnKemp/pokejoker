@@ -4,6 +4,25 @@
     outline: none;
   }
 }
+
+#secondPicture{
+width: 30%;
+  margin-top: 40%;
+}
+
+.text{
+  display: inline-block;
+   margin: 10px 10px;
+  padding-inline: 10%;
+ }
+
+ul li {
+  display: inline-block;
+  margin: 10px 10px;
+  padding-inline: 10%;
+}
+
+
 #hidePokemon{
  width:30%;
   filter: brightness(0);
@@ -117,7 +136,9 @@ h1{
       #ashIcon{
         width: 20%;
         grid-column: 1/2;
-        margin-left: 20vmin;
+        margin-left: 65%;
+        z-index: -2;
+        margin-top: 50%;
       }
 
       .PokemonIcon {

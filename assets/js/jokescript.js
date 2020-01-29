@@ -20,12 +20,12 @@ function fetchJoke(){
 }
 
 function joke(joke){
-    document.getElementById("jokeText").innerHTML = joke;
+    // document.getElementById("jokeText").innerHTML = joke;
 }
 
 
 
-    document.getElementById("pokeGuess1").addEventListener("click",function () {
+    document.getElementById("pokeball").addEventListener("click",function () {
       joke(joker);
         console.log(joker);
     });
