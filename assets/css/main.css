@@ -32,6 +32,15 @@ body h1 {
   text-align: center;
   margin-top: 5vmin;
   font-size: 2vw;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid black;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  /* Gives that scrolling effect as the typing happens */
+  /* Adjust as needed */
+  animation: typing 3.5s, blink-caret 0.75s step-end infinite;
 }
 
 @font-face {
@@ -130,6 +139,24 @@ body h1 {
 button:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: grey;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
