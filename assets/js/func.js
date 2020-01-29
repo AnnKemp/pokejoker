@@ -40,10 +40,14 @@
             }
             function weaponFunc() {
                 document.querySelector(".chooseItem").style.display="block";
+                document.querySelector("#insultText").style.display="none";
             }
             showWeapons();
 
+            document.querySelector(".PokemonIcon").addEventListener("click", function(){
+                document.querySelector("#jokeText").style.display="block";
 
+            });
 
        }else{
             document.getElementById("lala").innerHTML="you missed!";
