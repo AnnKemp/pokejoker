@@ -167,7 +167,7 @@ button:hover {
 
 @keyframes typing {
   from {
-    margin-left: 40%;
+    margin-left: 50%;
     width: 0%;
   }
   to {
