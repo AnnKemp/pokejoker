@@ -61,10 +61,13 @@ h1{
 /* Gives that scrolling effect as the typing happens */
    /* Adjust as needed */
   animation:
-          typing 7s ,
-          blink-caret .75s step-end infinite;
-}
 
+          typing 8s ,
+          blink-caret 0.6s ease-out infinite;
+}
+//@keyframes blink-caret {
+//  from, to { border-color: transparent }
+//  50% { border-color: grey; }
 @font-face {
   font-family: LoRes;
   src: url("../fonts/LoRes12OT-BoldAltOakland.ttf");
@@ -201,8 +204,8 @@ button:hover  {
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  40% { border-color: grey; }
+  from, to  { border-color: transparent }
+  30% { border-color: grey; }
 }
 
 #rock:hover {
