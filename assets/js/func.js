@@ -17,10 +17,10 @@
 
           alert(Name);
 
-          /*if(Name == ImageIndex.name) {
-               document.querySelector(".guessPokemon").style.display = none;
-             document.querySelector(".catchIt").style.display = block;
-                  }*/
+          //if(Name == ImageIndex.name) {
+          //     document.querySelector(".guessPokemon").style.display = none;
+         //    document.querySelector(".catchIt").style.display = block;
+               //   }
       }
 
 
