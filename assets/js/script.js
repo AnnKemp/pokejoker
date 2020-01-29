@@ -7,7 +7,7 @@
 
     //fetch JSON
     async function getPokemon() {
-        try {
+     //   try {
 
         //fetch stream of data 151 pokemons, starting at 0
         const pokemonPlain = await fetch(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151`);
@@ -43,9 +43,9 @@
 
            getPokemonImage(ImageIndex);
 
-    } catch (error) {
-        console.log("error by fetching the name- and id-data");
-    }
+  //  } catch (error) {
+       // console.log("error by fetching the name- and id-data");
+  //  }
 }
 //--------------------------------------------end of asynchron function one ------------------------------------------------------------------------------------------
 getPokemon(); // call the function
@@ -53,27 +53,37 @@ getPokemon(); // call the function
   //console.log(pObject); // testing in the console dus met ne return krijg ik de pObject data niet uit de functie ???!!! why?!!!
 
     async function getPokemonImage(name) {
-       try {
+      // try {
              //fetch stream of data to get the images
             const pokemonImage = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
             const pImage = await pokemonImage.json();
 
-            //console.log(pImage.sprites.front_default);  // this works
-            //console.log(pImage.name);  // testing
-            //console.log(pImage.id);   // testing
+           //console.log(pImage.sprites.front_default);  // this works
+           //console.log(pImage.name);  // testing
+           //console.log(pImage.id);   // testing
 
            // fill a constant array to keep/save the data so you don't need to fetch x-times anymore, only one time a day
-           keepImage.push(pImage);
-          // console.log(keepImage);  testing . . .
+                keepImage.push(pImage);
+               // console.log(keepImage[0].name);  // testing . . .
+                let imageName=keepImage[0].name;
 
             // show the images corresponding to the name and id in the html
            document.getElementsByClassName("PokemonIcon")[0].src= keepImage[0].sprites.front_default;
            document.getElementsByClassName("PokemonIcon")[1].src= keepImage[0].sprites.front_default;
           // document.querySelector(".PokemonIcon").src = pImage.sprites.front_default;    // this works! but not for more then one!
 
-        } catch (error) {
-          console.log("error by fetching the image-data or selecting the image out of the data to show it in the html");
+        // Check browser support
+        if (typeof(Storage) !== "undefined") {
+            // Store
+            sessionStorage.setItem("nameImage", imageName);
+        } else {
+           alert("Sorry, your browser does not support Web Storage...");
         }
+
+           // return imageName; // via localmemory doorgeven aan het andere script?
+  // } catch (error) {
+      //    console.log("error by fetching the image-data or selecting the image out of the data to show it in the html");
+    //   }
     }
 
     /* todo list

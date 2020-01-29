@@ -15,12 +15,15 @@
 
       function checkName(Name){
 
-          alert(Name);
+          // Retrieve data from session
+          let ImageIndexName= sessionStorage.getItem("nameImage");
 
-          //if(Name == ImageIndex.name) {
-          //     document.querySelector(".guessPokemon").style.display = none;
-         //    document.querySelector(".catchIt").style.display = block;
-               //   }
+          //console.log(ImageIndexName);
+
+        if(Name == ImageIndexName) {
+            document.querySelector(".guessPokemon").style.display = none;
+            document.querySelector(".catchIt").style.display = block;
+       }
       }
 
 
