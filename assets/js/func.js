@@ -48,6 +48,10 @@
                 document.querySelector("#jokeText").style.display="block";
 
             });
+            // voor audio na knopklik af te spelen id moet nog aangepast worden
+            //var x = document.getElementById("myAudio");
+             //   x.play();
+
 
        }else{
             document.getElementById("lala").innerHTML="you missed!";
