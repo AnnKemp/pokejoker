@@ -18,6 +18,11 @@ img {
   image-rendering: pixelated;
 }
 
+img#secondPicture{
+  width:400px;
+  height:400px;
+}
+
 body {
   font-family: LoRes, sans-serif;
   background: url("../img/used/bg_bg.svg");
