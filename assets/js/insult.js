@@ -5,7 +5,7 @@ async function insults(lala) {
     const pokemonImage = await fetch(`https://amused.api.stdlib.com/insult@1.0.0/`);
     const pImage = await pokemonImage.json();
 
-    document.querySelector("p.text").innerHTML =pImage;
+    document.querySelector("#insultText").innerHTML =pImage;
 
     var str = document.querySelector("p.text").innerHTML,
         i = 0,
