@@ -72,6 +72,9 @@ body h1 {
   grid-template-columns: 1fr 1fr;
   margin: auto;
 }
+.catchIt{
+  display: none;
+}
 .catchPokemon h1 {
   grid-column: 1/3;
   display: block;
