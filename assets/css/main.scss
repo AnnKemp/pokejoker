@@ -29,7 +29,7 @@ ul li {
 #hidePokemon{
  width:30%;
   filter: brightness(0);
-top: 10%;
+  top: 10%;
   position: absolute;
 }
 
@@ -37,17 +37,19 @@ img{
   image-rendering: auto;
   image-rendering: crisp-edges;
   image-rendering: pixelated;}
-body{
+body {
 
   font-family: LoRes, sans-serif;
   background: url("../img/used/bg_bg.svg");
   background-repeat: no-repeat;
   height: 100%;
-background-color: #9A9A9A;
+  background-color: #9A9A9A;
   background-size: cover;
-background-position: center;
+  background-position: center;
   font-style: normal;
   font-weight: 100;
+}
+
 h1{
  text-align: center;
   margin-top: 5vmin;
@@ -59,10 +61,10 @@ h1{
 /* Gives that scrolling effect as the typing happens */
    /* Adjust as needed */
   animation:
-          typing 3.5s ,
+          typing 7s ,
           blink-caret .75s step-end infinite;
 }
-}
+
 @font-face {
   font-family: LoRes;
   src: url("../fonts/LoRes12OT-BoldAltOakland.ttf");
@@ -193,14 +195,14 @@ button:hover  {
 }
 
 @keyframes typing {
-  from { width: 0% }
-  to { width: 100% }
+  from { margin-left:40%;width: 0% }
+  to { text-align: center; width: 100% }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  0% { border-color: grey; }
+  40% { border-color: grey; }
 }
 
 #rock:hover {

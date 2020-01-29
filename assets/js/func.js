@@ -54,7 +54,7 @@
 
 
        }else{
-            document.getElementById("lala").innerHTML="you missed!";
+            document.getElementById("lala").innerHTML="You can't see it clearly yet...";
 
             let myVar;
 
