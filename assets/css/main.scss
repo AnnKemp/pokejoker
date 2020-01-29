@@ -73,27 +73,28 @@ h1{
 
 
 .catchPokemon{
-   width: 90%;
+  width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: auto;
 
-h1{
-  grid-column: 1/3;
-  display: block;
-}
-            .PokemonIcon {
-               justify-content: flex-end;
-                width: 20%;
-              grid-column: 2/3;
+      h1{
+        grid-column: 1/3;
+        display: block;
+      }
 
-              }
-            #ashIcon{
-                justify-content: flex-start;
-                width: 20%;
+      #ashIcon{
+        width: 20%;
+        grid-column: 1/2;
+        margin-left: 20vmin;
+      }
 
+      .PokemonIcon {
+        width: 20%;
+        grid-column: 2/3;
 
-              }
+      }
+
 
             #fightItem{
               visibility: hidden;
@@ -120,7 +121,7 @@ h1{
   }
 
   .insult{
-   
+
   }
 }
 
