@@ -92,7 +92,9 @@ body h1 {
   grid-column: 3/4;
   grid-row: 1/3;
 }
-
+#jokeText{
+  display:none;
+}
 .catchPokemon {
   width: 80%;
   display: grid;
