@@ -6,7 +6,7 @@
 
       document.getElementsByClassName("guessButton")[i].addEventListener("click", function(){
 
-        document.getElementById("lala").innerHTML="There is a wild pokemon rapidly coming towards you, which one is it?";
+        document.getElementById("lala").innerHTML="There is a wild pokemon rapidly coming towards you, wich one is it?";
 
         Name = document.getElementsByClassName("guessButton")[i].innerHTML;
 
@@ -17,7 +17,7 @@
       function checkName(Name){
 
           // Retrieve data from session
-          let ImageIndexName = sessionStorage.getItem("nameImage");
+          let ImageIndexName= sessionStorage.getItem("nameImage");
 
         if(Name == ImageIndexName) {
                 // clear animated sentence
@@ -36,7 +36,7 @@
             let weapon;
 
             function showWeapons() {
-                weapon = setTimeout(weaponFunc, 100);
+                weapon = setTimeout(weaponFunc, 10000);
             }
             function weaponFunc() {
                 document.querySelector(".chooseItem").style.display="block";
