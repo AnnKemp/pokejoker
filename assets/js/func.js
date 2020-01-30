@@ -36,7 +36,7 @@
             let weapon;
 
             function showWeapons() {
-                weapon = setTimeout(weaponFunc, 2000);
+                weapon = setTimeout(weaponFunc, 10000);
             }
             function weaponFunc() {
                 document.querySelector(".chooseItem").style.display="block";
