@@ -1,6 +1,5 @@
 var joker = fetchJoke();
 
-
 function fetchJoke(){
     fetch("https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random", {
         "headers":{
@@ -20,7 +19,7 @@ function fetchJoke(){
 }
 
 function joke(joke){
-    // document.getElementById("jokeText").innerHTML = joke;
+    document.getElementById("jokeText").innerHTML = joke;
 }
 
 

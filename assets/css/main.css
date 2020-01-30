@@ -167,6 +167,15 @@ h1 {
   width: 70%;
   padding: 2vmin;
 }
+.textMenu .menuText button {
+  border: none;
+  background: none;
+  display: block;
+  font-family: LoRes, sans-serif;
+  justify-content: space-around;
+  font-size: xx-large;
+}
+
 .catchIt {
   display: none;
 }
