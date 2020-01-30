@@ -47,23 +47,19 @@
 </section>
     <section class="textMenu">
 
-        <button onclick="myMove()">Click Me</button>
 
-
-        <div id ="myContainer">
-            <div id ="myAnimation"></div>
-        </div>
 
 
         <section  class="menuText">
 <!--            <p class="wildPokemon"> a wild <span class="pokeName">pokemon</span> just appeared</p>-->
-            <ul class="chooseItem">
+            <div class="chooseItem">
+            <button id="apple" class="button" onclick="myMove()">Click Me</button>
 
-                <a onclick="myMove()" id="apple"  class="button"><li>Apple</li></a>
-                <a id="rock" class="button"><li>Rock</li></a>
-                <a id="pokeball" class="button"><li>Pokeball</li></a>
-            </ul>
 
+            <div cl ="myContainer">
+                <div id ="myAnimation"></div>
+            </div>
+            </div>
             <section class="insult">
                 <p id="insultText" class="text"></p>
             </section>

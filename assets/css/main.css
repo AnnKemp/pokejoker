@@ -204,8 +204,9 @@ a:hover {
 #myAnimation {
   width: 50px;
   height: 50px;
-  position: absolute;
-  background-color: red;
+  position: relative;
+  background-image: url("../img/used/candy_candy.svg");
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=main.css.map */
