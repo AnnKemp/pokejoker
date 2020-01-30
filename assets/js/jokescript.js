@@ -19,14 +19,26 @@ function fetchJoke(){
 }
 
 function joke(joke){
-    document.getElementById("jokeText").innerHTML = joke;
+   // document.getElementById("jokeText").innerHTML = joke;
 }
 
 
 
-    document.getElementById("pokeball").addEventListener("click",function () {
-      joke(joker);
-        console.log(joker);
-    });
+
+
+document.getElementById("pokeball").addEventListener("click",function () {
+    joke(joker);
+    console.log(joker);
+});
+
+/*const catchBtn = document.querySelectorAll('.menuText button');
+
+catchBtn.addEventListener("click",function () {
+    joke(joker);
+    console.log(joker);
+});*/
+
+
+
 
 
