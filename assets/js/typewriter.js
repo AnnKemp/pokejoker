@@ -4,11 +4,11 @@ function myMove() {
     var id = setInterval(frame, 10);
     document.getElementById("myAnimation").style.display="block";
     function frame() {
-        if (pos == 180) {
+        if (pos == 16) {
             clearInterval(id);
         } else {
             pos++;
-            elem.style.left = pos + 'px';
+            elem.style.left = pos + '5px';
 
         }
     }
