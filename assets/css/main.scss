@@ -17,7 +17,7 @@ width: 30%;
    margin: 10px 10px;
   padding-inline: 10%;
   text-align: center;
-position: relative;
+
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid black; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -47,7 +47,9 @@ ul li {
 img{
   image-rendering: auto;
   image-rendering: crisp-edges;
-  image-rendering: pixelated;}
+  image-rendering: pixelated;
+  filter: grayscale(100%);
+}
 body {
 
   font-family: LoRes, sans-serif;
@@ -218,4 +220,21 @@ button:hover  {
   from, to  { border-color: transparent }
   30% { border-color: grey; }
 }
+a:hover{
+
+  cursor: pointer ;
+}
+
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+
+
+
+
+
+
 

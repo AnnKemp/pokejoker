@@ -15,6 +15,14 @@
 </head>
 <body>
 
+<p>
+    <button onclick="myMove()">Click Me</button>
+</p>
+
+<div id ="myContainer">
+    <div id ="myAnimation"></div>
+</div>
+
 <h1 id="lala">There is a wild pokemon rapidly coming towards you, wich one is it?</h1>
 <section class="guessPokemon">
 
@@ -40,17 +48,19 @@
     <img src="" alt="pokeball" id="fightItem">
     <img src="assets/img/used/ash_ash.svg" alt="guessPokeIcon" id="ashIcon">
     <img src="" alt="guessPokeIcon" class="PokemonIcon" id="secondPicture">
-
+        <div id="heading1"></div>
 </section>
     <section class="textMenu">
 
         <section  class="menuText">
 <!--            <p class="wildPokemon"> a wild <span class="pokeName">pokemon</span> just appeared</p>-->
             <ul class="chooseItem">
-                <a id="apple"><li>Apple</li></a>
-                <a id="rock"><li>Rock</li></a>
-                <a id="pokeball"><li>Pokeball</li></a>
+
+                <a onclick="myMove()" id="apple"  class="button"><li>Apple</li></a>
+                <a id="rock" class="button"><li>Rock</li></a>
+                <a id="pokeball" class="button"><li>Pokeball</li></a>
             </ul>
+
             <section class="insult">
                 <p id="insultText" class="text"></p>
             </section>

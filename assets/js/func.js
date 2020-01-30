@@ -45,7 +45,7 @@
             showWeapons();
 
             document.querySelector("#secondPicture").addEventListener("click", function(){
-                document.querySelector("#jokeText").style.display="block";
+                document.querySelector("#insultText").style.display="block";
 
             });
             // voor audio na knopklik af te spelen id moet nog aangepast worden
