@@ -101,13 +101,20 @@ h1{
 
    top:0;
    margin-left: -150%;
-   z-index: 1;
+   z-index: 3000000000;
    height: 40%;
    position:absolute;
    margin-top: 10%;
    -webkit-animation:myfirst 17s       infinite; /* Chrome, Safari, Opera */
    animation:myfirst 17s;
  }
+
+  @keyframes myfirst
+  {
+    0%   {left:25%; top:0;transform:rotate(29deg)}
+    50%  {left:100%; margin-left:100px;}
+    100% {left:30%; top:0;transform:rotate(-20deg)}
+  }
 
 }
 
@@ -415,11 +422,6 @@ section.fadeIn{
   }
 
 
-  @keyframes myfirst
-  {
-    0%   { left:25%; top:0;transform:rotate(29deg)}
-    50%  {left:100%; margin-left:100px;}
-    100% {left:30%; top:0;transform:rotate(-20deg)}
-  }
+
 }
 

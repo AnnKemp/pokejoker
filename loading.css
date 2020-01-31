@@ -1,25 +1,13 @@
 
-
 h1 {
     top:22%;
     position: absolute;
     left: 50%;
     color: black;
     font: 400 500% 'LoRes 12 OT', serif;
+    z-index: 3000000;
 }
 
-
-
-/* Chrome, Safari, Opera */
-
-
-/* Standard syntax */
-@keyframes myfirst
-{
-    0%   { left:25%; top:0;transform:rotate(29deg)}
-    50%  {left:100%; margin-left:100px;}
-    100% {left:30%; top:0;transform:rotate(-20deg)}
-}
 
 @keyframes loading {
     from { max-width: 0; }
@@ -32,7 +20,7 @@ h1:before {
     max-width: 4em;
     color: #4e4e4e;
     animation: loading 4s linear;
-
+z-index: 300000;
 
 }
 
