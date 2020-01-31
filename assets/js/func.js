@@ -16,7 +16,7 @@ document.querySelector('.introButton').addEventListener("click", function (){
     Intro.classList.add('fadeOut');
     Intro.style.display='none';
     guess.classList.add('fadeIn');
-    guess.style.display='flex';
+    guess.style.display = guess.style.display === 'none' ? '' : 'none';
 
  });
 
