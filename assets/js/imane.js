@@ -1,7 +1,4 @@
-
 const game = ()=> {
-
-
 
 const startGame = () =>{
     const playBtn = document.querySelectorAll('guessButton');
@@ -12,7 +9,6 @@ const startGame = () =>{
         guess.classList.add("fadeOut");
         catchIt.classList.add("fadeIn");
     });
-
 };
 startGame();
 
