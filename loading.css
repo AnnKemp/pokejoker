@@ -12,7 +12,7 @@ body {
 
 }
 
-h1 .introTitle {
+h1 {
     top:22%;
     position: absolute;
     left: 50%;
@@ -20,23 +20,18 @@ h1 .introTitle {
     color: hsla(0,0%,100%,.0);
     /*font: 400 500% 'Arvo', serif;;*/
 
-   font: 400 500% 'Crete Round', serif;
+      font: 400 500% 'Crete Round', serif;
 }
-
 
                         /*font: 400 500% 'Press Start 2P', cursive;*/
-
-body{
-    overflow: hidden;
-}
-
-
-img .intro{
-    margin-left: -150%;
-    z-index: 1;
-    height: 40%;
+img
+{
+    top:0;
+ margin-left: -150%;
+z-index: 1;
+   height: 40%;
     position:absolute;
-    margin-top: 10%;
+margin-top: 10%;
     -webkit-animation:myfirst 17s infinite; /* Chrome, Safari, Opera */
     animation:myfirst 17s;
 }
