@@ -7,7 +7,7 @@
 
     //fetch JSON
     async function getPokemon() {
-     //   try {
+       try {
 
         //fetch stream of data 151 pokemons, starting at 0
         const pokemonPlain = await fetch(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151`);
@@ -39,21 +39,19 @@
              randomGetal=1;
          }
          ImageIndex = randomSprite[randomGetal]; // to select the random image to show from the four selected pokemons
-         ImageIndex=ImageIndex+1;  //there is a difference between de index of the first get (the names/id and the second get: the images, by doing +1 this index-difference dissapears
+         ImageIndex=ImageIndex+1;  //there is a difference between de index of the first fetch (the names/id and the second fetch: the images, by doing +1 this index-difference dissapears
 
            getPokemonImage(ImageIndex);
 
-  //  } catch (error) {
-       // console.log("error by fetching the name- and id-data");
-  //  }
+         } catch (error) {
+        console.log("error by fetching the name- and id-data");
+    }
 }
 //--------------------------------------------end of asynchron function one ------------------------------------------------------------------------------------------
 getPokemon(); // call the function
 
-  //console.log(pObject); // testing in the console dus met ne return krijg ik de pObject data niet uit de functie ???!!! why?!!!
-
     async function getPokemonImage(name) {
-      // try {
+       try {
              //fetch stream of data to get the images
             const pokemonImage = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
             const pImage = await pokemonImage.json();
@@ -72,19 +70,20 @@ getPokemon(); // call the function
            document.getElementsByClassName("PokemonIcon")[1].src= keepImage[0].sprites.front_default;
           // document.querySelector(".PokemonIcon").src = pImage.sprites.front_default;    // this works! but not for more then one!
 
-        // Check browser support
+        //interchanging data between js-pages
+           // Check browser support
         if (typeof(Storage) !== "undefined") {
-            // Store
+            // Store data in session to use on func.js
             sessionStorage.setItem("nameImage", imageName);
         } else {
            alert("Sorry, your browser does not support Web Storage...");
         }
 
-           // return imageName; // via localmemory doorgeven aan het andere script?
-  // } catch (error) {
-      //    console.log("error by fetching the image-data or selecting the image out of the data to show it in the html");
-    //   }
-    }
+
+   } catch (error) {
+         console.log("error by fetching the image-data or selecting the image out of the data to show it in the html");
+            }
+        }
 
     /* todo list
     // het vergelijken of er twee van die 4 randomwaarden hetzelfde zijn heb ik nog niet gedaan
