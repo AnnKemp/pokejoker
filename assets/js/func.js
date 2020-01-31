@@ -22,15 +22,13 @@
           let ImageIndexName= sessionStorage.getItem("nameImage");
 
           // compare if the name on the clicked button and the name of the pokemon are equal
-        if(Name == ImageIndexName) {  // so Yes/true
-                // clear animated sentence
-           const guess = document.querySelector(".guessPokemon");
+        if(Name === ImageIndexName) {  // so Yes/true
+
+            const guess = document.querySelector(".guessPokemon");
             guess.classList.add('fadeOut');
-            // hide screen 1
             const catchIt = document.querySelector('.catchIt');
             catchIt.classList.add("fadeIn");
-            // show screen 2
-
+            
             // adjust name of pokemon in the second screen
             document.querySelector("#pokeId").innerHTML=Name;
             // hide weapons temporaly
