@@ -123,7 +123,7 @@ h1{
       top:10%;
     }
   }
-
+// buttons
   .guess {
     margin-top: 20%;
     grid-column: 2/3;
@@ -135,7 +135,7 @@ h1{
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 
-
+//button background
     .guessButton {
       width: 100%;
       height: 30%;
@@ -151,7 +151,7 @@ h1{
       background-size: contain;
 
     }
-
+// silhouette pokemon
     .hiddenPokemon {
       margin-top: 40%;
       grid-column: 3/4;
@@ -163,18 +163,18 @@ justify-content: space-around;
   }
 }
 
-
+// section with starting text and the images we used
 .catchPokemon{
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 6vmin;
-
+// starting text
   h1{
     grid-column: 1/3;
     display: block;
   }
-
+// game character
   #ashIcon{
     width: 30%;
     grid-column: 1/2;
@@ -187,10 +187,14 @@ justify-content: space-around;
     grid-column: 2/3;
   }
 
+
+// item thrown by character
+
   #fightItem{
     visibility: hidden;
   }
 }
+
 
 .catchIt{
 
@@ -207,6 +211,7 @@ justify-content: space-around;
   left: 50%;
   transform: translate(-50%, -50%);
 
+  // menu section
   .textMenu{
     margin-top: -12vmin;
     width: 90vmin;
@@ -214,6 +219,8 @@ justify-content: space-around;
     background-position: center;
     background-repeat: no-repeat;
     justify-content: center;
+
+// text inside menu
 
     .menuText{
 
@@ -223,6 +230,7 @@ justify-content: space-around;
       width: 70%;
       padding: 2vmin;
 
+// battle buttons
       button{
         border: none;
         background: none;
@@ -243,6 +251,7 @@ button:hover  {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+// typewriter effect
 
 @keyframes typing {
   from { margin-left:auto; margin-right:auto;width: 0 }
@@ -254,10 +263,12 @@ button:hover  {
   from, to  { border-color: transparent }
   30% { border-color: grey; }
 }
-a:hover{
+// show pointer on hover
+button:hover{
   cursor: pointer;
 }
 
+// battle item animation
 #myAnimation {
   width: 10%;
   height: 10%;
@@ -268,6 +279,7 @@ a:hover{
   margin-left: 30%;
 }
 
+// pokeball button
 #pokeball{
   margin-top: 10%;
 

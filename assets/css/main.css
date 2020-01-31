@@ -236,7 +236,7 @@ button:hover {
     border-color: grey;
   }
 }
-a:hover {
+button:hover {
   cursor: pointer;
 }
 
