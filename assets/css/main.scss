@@ -197,6 +197,7 @@ h1{
       border: none;
       background: none;
       font-family: "LoRes 12 OT", sans-serif;
+      display: block;
     }
 
   }
@@ -249,5 +250,15 @@ a:hover{
 
   text-decoration: none;
   border-style: none;
+
+}
+
+div.fadeOut{
+  opacity: 0;
+  pointer-events: none;
+}
+div.fadeIn{
+  opacity: 1;
+  pointer-events: all;
 
 }

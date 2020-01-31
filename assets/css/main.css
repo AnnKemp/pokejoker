@@ -171,6 +171,7 @@ h1 {
   border: none;
   background: none;
   font-family: "LoRes 12 OT", sans-serif;
+  display: block;
 }
 .catchIt {
   display: none;
@@ -220,6 +221,16 @@ a:hover {
   margin-top: 10%;
   text-decoration: none;
   border-style: none;
+}
+
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
 }
 
 /*# sourceMappingURL=main.css.map */
