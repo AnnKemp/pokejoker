@@ -28,7 +28,7 @@
             guess.classList.add('fadeOut');
             const catchIt = document.querySelector('.catchIt');
             catchIt.classList.add("fadeIn");
-            
+
             // adjust name of pokemon in the second screen
             document.querySelector("#pokeId").innerHTML=Name;
             // hide weapons temporaly
