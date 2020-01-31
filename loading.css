@@ -1,12 +1,5 @@
 
-h1 {
-    top:22%;
-    position: absolute;
-    left: 50%;
-    color: black;
-    font: 400 500% 'LoRes 12 OT', serif;
-    z-index: 3000000;
-}
+
 
 
 @keyframes loading {

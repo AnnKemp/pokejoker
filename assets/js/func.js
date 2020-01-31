@@ -87,4 +87,4 @@ document.querySelector('.introButton').addEventListener("click", function (){
                   myFunction();
              }
       }
-})()
+})();
