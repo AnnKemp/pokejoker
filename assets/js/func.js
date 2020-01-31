@@ -34,7 +34,7 @@ Intro.classList.add('fadeOut');
 
           // compare if the name on the clicked button and the name of the pokemon are equal
         if(Name === ImageIndexName) {  // so Yes/true
-
+            document.getElementById("lala").innerHTML=" ";
             guess.classList.add('fadeOut');
             catchIt.classList.add("fadeIn");
 

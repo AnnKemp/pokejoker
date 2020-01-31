@@ -129,7 +129,6 @@ h1 {
 .catchPokemon h1 {
   grid-column: 1/3;
   display: block;
-  font-size: large;
 }
 .catchPokemon #ashIcon {
   width: 30%;
@@ -217,7 +216,7 @@ a:hover {
   width: 10%;
   height: 10%;
   position: absolute;
-  
+  background-image: url("../img/used/pokeball_pokeball.svg");
   background-repeat: no-repeat;
   margin-top: -20%;
   margin-left: 30%;
@@ -288,7 +287,7 @@ section.fadeIn {
     display: block;
   }
   .guessPokemon .hiddenPokemon #hidePokemon {
-    width: 60%;
+    width: 50%;
     filter: brightness(0);
     position: static;
     margin: auto;
@@ -304,8 +303,6 @@ section.fadeIn {
     text-align: center;
   }
   .guessPokemon .guess {
-    margin: auto;
-    width: 100%;
     display: block;
     justify-content: center;
     -webkit-transform: scale(1);
