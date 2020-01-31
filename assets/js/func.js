@@ -3,17 +3,22 @@ const guess = document.querySelector(".guessPokemon");
 const catchIt = document.querySelector('.catchIt');
 const Intro = document.querySelector('.Intro');
 
-
-
 (() => {
-
 
 // a loop to select the four buttons on the startpage and add an eventlisteners (click event) on them
 
-
 Intro.classList.add('fadeIn');
 guess.style.display='none';
-   catchIt.style.display='none';
+catchIt.style.display='none';
+
+document.querySelector('.introButton').addEventListener("click", function (){
+    document.querySelector('.body').style.background = 'url("../assets/img/used/bg_bg.svg")';
+    Intro.classList.add('fadeOut');
+    guess.classList.add('fadeIn');
+    guess.style.display='block';
+
+ });
+
 
 
 
