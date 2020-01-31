@@ -14,6 +14,7 @@ catchIt.style.display='none';
 document.querySelector('.introButton').addEventListener("click", function (){
     document.querySelector('.body').style.background = 'url("../assets/img/used/bg_bg.svg")';
     Intro.classList.add('fadeOut');
+    Intro.style.display='none';
     guess.classList.add('fadeIn');
     guess.style.display='block';
 
