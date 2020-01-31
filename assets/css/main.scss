@@ -316,24 +316,24 @@ section.fadeIn{
     transition: opacity 0.5s ease;
     display: block;
     .hiddenPokemon #hidePokemon{
-      width:30%;
+      width:60%;
       filter: brightness(0);
-      top: 10%;
       position: static;
       margin: auto;
       display: block;
     }
     .whichPokemon {
     display: block;
-
+    margin: auto;
       .questionMark {
-
         position: static;
-       margin: auto;
+        font-size: 10vh;
+        text-align: center;
       }
     }
     .guess {
-
+      margin: auto;
+      width: 100%;
       display: block;
       justify-content: center;
       -webkit-transform: scale(1);
