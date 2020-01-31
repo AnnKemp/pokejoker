@@ -5,6 +5,10 @@
   outline: none;
 }
 
+@font-face {
+  font-family: LoRes;
+  src: url("../fonts/LoRes12OT-BoldAltOakland.ttf");
+}
 #secondPicture {
   width: 30%;
   margin-bottom: -10%;
@@ -34,9 +38,10 @@ img {
 
 body {
   font-family: LoRes, sans-serif;
-  background: url("../img/used/bg_bg.svg");
+  background-image: url(https://i.pinimg.com/originals/31/22/9d/31229d5403b0065a7fb0d5fbb43e5c92.gif);
+  /* background: url("../img/used/bg_bg.svg");*/
   background-repeat: no-repeat;
-  height: 100%;
+  height: 100vh;
   background-color: #9A9A9A;
   background-size: cover;
   background-position: center;
@@ -59,10 +64,33 @@ h1 {
   animation: typing 8s, blink-caret 0.6s ease-out infinite;
 }
 
-@font-face {
-  font-family: LoRes;
-  src: url("../fonts/LoRes12OT-BoldAltOakland.ttf");
+.Intro {
+  background-size: cover;
+  background: no-repeat;
+  width: 100%;
+  height: 100%;
 }
+.Intro .introButton {
+  width: 40%;
+  height: 30%;
+  border: none;
+  padding: 3vmin;
+  display: block;
+  background-image: url("../img/used/guessbtn_guess buttonn.svg");
+  background-repeat: no-repeat;
+  background-color: rgba(148, 225, 255, 0);
+  font-size: 2vw;
+  background-position: center center;
+  font-family: LoRes, sans-serif;
+  background-size: contain;
+  z-index: 30000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .guessPokemon {
   height: 50vh;
   display: flex;

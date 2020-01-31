@@ -11,7 +11,10 @@ const Intro = document.querySelector('.Intro');
 // a loop to select the four buttons on the startpage and add an eventlisteners (click event) on them
 
 
-Intro.classList.add('fadeOut');
+Intro.classList.add('fadeIn');
+guess.style.display='none';
+   catchIt.style.display='none';
+
 
 
   for(let i=0;i<4 ;i++) {

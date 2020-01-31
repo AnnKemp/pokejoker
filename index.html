@@ -9,17 +9,19 @@
     <meta name="pokemon game" content="guess the pokemon and catch it if you can!">
     <meta name="pokemon battle" content="catch the pokemon" >
     <meta name="pixel game" content="play pokemon" >
+    <link rel="stylesheet" href="loading.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/main.css">
-  <!--  <link rel="stylesheet" href="loading.css">-->
+
     <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body class="body">
 <section class="Intro">
-
+    <button class="introButton">Play Game!</button>
     <iframe src="http://23.237.126.42/ost/pokemon-original-game-soundtrack/wahjdqip/101%20-%20opening.mp3" allow="autoplay" style="display:none" id="iframeAudio">
     </iframe>
-    <h1 class ="introTitle" data-content="Poke Catch"></h1>
+
+    <h1 data-content="Poke Catch"></h1>
     <img class= "intro" src="./assets/img/used/pikaBallon.png">
 
 </section>
@@ -27,7 +29,7 @@
 
 
 
-<section class="guessPokemon">
+<section class="guessPokemon fadeOut">
     <h1 id="lala">There is a wild pokemon rapidly coming towards you, wich one is it?</h1>
     <section class="whichPokemon">
         <p class="questionMark">?</p>
