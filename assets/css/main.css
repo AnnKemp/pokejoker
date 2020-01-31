@@ -129,6 +129,7 @@ h1 {
 .catchPokemon h1 {
   grid-column: 1/3;
   display: block;
+  font-size: large;
 }
 .catchPokemon #ashIcon {
   width: 30%;

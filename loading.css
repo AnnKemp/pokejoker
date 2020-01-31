@@ -9,10 +9,10 @@ body {
        
        /* background-blend-mode: luminosity;*/
        /* transition: background-color 1s ease-out;*/
-       
+
 }
 
-h1 {
+h1 .introTitle {
     top:22%;
     position: absolute;
     left: 50%;
@@ -20,24 +20,23 @@ h1 {
     color: hsla(0,0%,100%,.0);
     /*font: 400 500% 'Arvo', serif;;*/
 
-      font: 400 500% 'Crete Round', serif;
+   font: 400 500% 'Crete Round', serif;
 }
 
 
                         /*font: 400 500% 'Press Start 2P', cursive;*/
 
+body{
+    overflow: hidden;
+}
 
 
-
-img
-{
-
-    top:0px;
- margin-left: -150%;
-z-index: 1;
-   height: 40%;
+img .intro{
+    margin-left: -150%;
+    z-index: 1;
+    height: 40%;
     position:absolute;
-margin-top: 10%;
+    margin-top: 10%;
     -webkit-animation:myfirst 17s infinite; /* Chrome, Safari, Opera */
     animation:myfirst 17s;
 }

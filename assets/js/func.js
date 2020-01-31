@@ -1,7 +1,24 @@
 (() => {
 
     let Name;
+    const guess = document.querySelector(".guessPokemon");
+    const catchIt = document.querySelector('.catchIt');
 // a loop to select the four buttons on the startpage and add an eventlisteners (click event) on them
+
+    const introPage = document.querySelector("body");
+
+    setTimeout(function(){
+
+
+
+
+
+
+    }, 3000);
+     document.querySelector('guessPokemon').style.display='none';
+
+
+
 
   for(let i=0;i<4 ;i++) {
         // if you click on one of the four buttons you call a nameless function
@@ -24,9 +41,7 @@
           // compare if the name on the clicked button and the name of the pokemon are equal
         if(Name === ImageIndexName) {  // so Yes/true
 
-            const guess = document.querySelector(".guessPokemon");
             guess.classList.add('fadeOut');
-            const catchIt = document.querySelector('.catchIt');
             catchIt.classList.add("fadeIn");
 
             // adjust name of pokemon in the second screen
