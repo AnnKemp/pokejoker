@@ -324,14 +324,12 @@ section.fadeIn{
       display: block;
     }
     .whichPokemon {
-      display: block;
+    display: block;
 
       .questionMark {
 
-        display: block;
-        font-size: 10vw;
-        left: 10%;
-        top: 10%;
+        position: static;
+       margin: auto;
       }
     }
     .guess {
