@@ -138,18 +138,18 @@ justify-content: space-around;
   }
 }
 
-
+// section with starting text and the images we used
 .catchPokemon{
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 6vmin;
-
+// starting text
   h1{
     grid-column: 1/3;
     display: block;
   }
-
+// game character
   #ashIcon{
     width: 30%;
     grid-column: 1/2;
@@ -164,7 +164,7 @@ justify-content: space-around;
 
   }
 
-
+// item thrown by character
   #fightItem{
     visibility: hidden;
   }
@@ -172,7 +172,7 @@ justify-content: space-around;
 
 
 
-
+// page 2 battle
 .catchIt{
 
   display: flex;
