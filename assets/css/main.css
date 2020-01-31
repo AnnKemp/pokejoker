@@ -84,6 +84,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+  transition: opacity 0.5s ease;
 }
 .guessPokemon .whichPokemon {
   grid-column: 1/2;
@@ -174,7 +175,7 @@ h1 {
   display: block;
 }
 .catchIt {
-  display: none;
+  transition: opacity 0.5s ease 0.5s;
 }
 
 button:hover {
@@ -223,12 +224,12 @@ a:hover {
   border-style: none;
 }
 
-div.fadeOut {
+section.fadeOut {
   opacity: 0;
   pointer-events: none;
 }
 
-div.fadeIn {
+section.fadeIn {
   opacity: 1;
   pointer-events: all;
 }

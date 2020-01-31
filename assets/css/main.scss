@@ -90,6 +90,7 @@ h1{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+  transition:opacity 0.5s ease ;
 
   .whichPokemon {
     grid-column: 1/2;
@@ -208,7 +209,8 @@ h1{
 }
 
 .catchIt{
-  display: none;
+
+  transition:opacity 0.5s ease 0.5s;
 
 }
 
@@ -253,11 +255,11 @@ a:hover{
 
 }
 
-div.fadeOut{
+section.fadeOut{
   opacity: 0;
   pointer-events: none;
 }
-div.fadeIn{
+section.fadeIn{
   opacity: 1;
   pointer-events: all;
 
