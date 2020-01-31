@@ -16,16 +16,18 @@
     <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body class="body">
-<section class="Intro">
-    <button class="introButton">Play Game!</button>
-    <iframe src="http://23.237.126.42/ost/pokemon-original-game-soundtrack/wahjdqip/101%20-%20opening.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-    </iframe>
+<section class="Intro" id="sectionIntro">
+    <button class="intro_Button" id="introButton">Play Game!</button>
+
+    <audio autoplay controls id="iframeAudio">
+        <source src="http://23.237.126.42/ost/pokemon-original-game-soundtrack/wahjdqip/101%20-%20opening.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
 
     <h1 data-content="Poke Catch"></h1>
-    <img id= "intro" src="./assets/img/used/pikaBallon.png">
-
+    <img id="intro" src="./assets/img/used/pikaBallon.png">
 </section>
-<section class="guessPokemon fadeOut">
+<section class="guessPokemon">
     <h1 id="lala">There is a wild pokemon rapidly coming towards you, wich one is it?</h1>
     <section class="whichPokemon">
         <p class="questionMark">?</p>
@@ -40,7 +42,7 @@
         <button value="PLAY" onclick="play()" class="guessButton" id="pokeGuess4"></button>
     </section>
 </section>
-<section class="catchIt fadeOut">
+<section class="catchIt">
     <section class="catchPokemon">
         <h1>A talking <span id="pokeId">pokemon</span> appeared!</h1>
         <img src="" alt="pokeball" id="fightItem">
@@ -71,7 +73,6 @@
         </div>
 
     </section>
-
 </section>
 
 <script src="assets/js/jokescript.js"></script>
