@@ -15,7 +15,7 @@ h1 {
     font: 400 500% 'LoRes 12 OT', serif;
 }
 
-img
+img .intro
 {
     top:0;
     margin-left: -150%;
@@ -23,7 +23,7 @@ img
     height: 40%;
     position:absolute;
     margin-top: 10%;
-    -webkit-animation:myfirst 17s infinite; /* Chrome, Safari, Opera */
+    -webkit-animation:myfirst 17s       infinite; /* Chrome, Safari, Opera */
     animation:myfirst 17s;
 }
 
