@@ -273,7 +273,7 @@ button:hover {
   width: 10%;
   height: 10%;
   position: absolute;
-  background-image: url("../img/used/pokeball_pokeball.svg");
+  /*background-image: url("../img/used/pokeball_pokeball.svg");*/
   background-repeat: no-repeat;
   margin-top: -20%;
   margin-left: 30%;
