@@ -1,4 +1,5 @@
-function myMove() {
+function myMove() {  // move pokebal or candy or rock
+
     var elem = document.getElementById("myAnimation");
     var pos = 0;
     var id = setInterval(frame, 19);
@@ -20,18 +21,23 @@ function myMove() {
         }
     }
 }
+
 document.getElementById("myAnimation").style.display="none";
-/*
+
+//#myAnimation    background-image: url("../img/used/pokeball_pokeball.svg");
+
+// voor die prentjes voor het werp-voorwerp te vervangen
 document.getElementById("pokeball").addEventListener("click", function(){
 
-    document.getElementById("myAnimation").style.backgroundImage= url("../img/used/pokeball_pokeball.svg");
-    myMove()
+    document.getElementById("myAnimation").style.backgroundImage= "url('assets/img/used/pokeball_pokeball.svg')";
+    myMove();
 });
 document.getElementById("rock").addEventListener("click", function(){
-    document.getElementById("myAnimation").style.backgroundImage= url("../img/used/pokeball_pokeball.svg");
-    myMove()
+    document.getElementById("myAnimation").style.backgroundImage= "url('assets/img/used/rock.png')";
+    myMove();
 });
 document.getElementById("candy").addEventListener("click", function(){
-    myMove()
-    document.getElementById("myAnimation").style.backgroundImage= url("../img/used/pokeball_pokeball.svg");
-}); */
+
+    document.getElementById("myAnimation").style.backgroundImage=" url('assets/img/used/candy_candy.svg')";
+    myMove();
+});
