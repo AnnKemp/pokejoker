@@ -1,11 +1,11 @@
 function myMove() {  // move pokebal or candy or rock
 
     var elem = document.getElementById("myAnimation");
-    var pos = 0;
+    var pos = 15;
     var id = setInterval(frame, 19);
     document.getElementById("myAnimation").style.display="block";
     function frame() {
-        if (pos == 16) {
+        if (pos == 25) {
             // remove interval
             clearInterval(id);
 
