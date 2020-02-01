@@ -7,6 +7,24 @@
     // change the background picture to the pink bubbly one
     document.getElementsByTagName("body")[0].style.backgroundImage="url(https://i.pinimg.com/originals/31/22/9d/31229d5403b0065a7fb0d5fbb43e5c92.gif)";
 
+    // turn the background music on for the intro
+    const src="assets/sounds/pokeMusic.mp3";
+
+    function sound(src) {
+        this.sound = document.createElement("audio");
+        this.sound.src = src;
+        this.sound.setAttribute("preload", "auto");
+        this.sound.setAttribute("controls", "none");
+        this.sound.style.display = "none";
+        document.body.appendChild(this.sound);
+        this.play = function(){
+            this.sound.play();
+        }
+       // this.stop = function(){
+         //   this.sound.pause();
+      //  }
+    }
+    sound(src);
     //-------------------------------------------- end intro screen --------------------------------------------------------------------------
 
     // add eventlistener on button and on click
@@ -22,6 +40,7 @@
         document.getElementsByTagName("body")[0].style.backgroundImage="url(assets/img/used/bg_bg.svg)";
 
     // schakelt het geluid uit
+
     //const audio=document.getElementById("iframeAudio");
    // audio.setAttribute("autoplay", "");
    //audio.removeAttribute("autoplay");
