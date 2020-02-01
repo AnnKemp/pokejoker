@@ -1,6 +1,7 @@
-(() => {
+var joker = fetchJoke();
 
-function joke(divInput){
+
+function fetchJoke(){
     fetch("https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random", {
         "headers":{
             "x-rapidapi-host": "matchilling-chuck-norris-jokes-v1.p.rapidapi.com",
@@ -12,19 +13,21 @@ function joke(divInput){
             return response.json();
         })
         .then(function (data) {
-            console.log(data.value);
-            document.getElementById("pokeGuess1").innerHMTL = divInput;
+            joker = data.value;
+            return joker;
         });
+    return joker;
+}
+
+function joke(joke){
+    // document.getElementById("jokeText").innerHTML = joke;
 }
 
 
 
-azeazeaze
-document.getElementById("pokeGuess1").addEventListener("click",function () {
-    joke();
-});
+    document.getElementById("pokeball").addEventListener("click",function () {
+      joke(joker);
+        console.log(joker);
+    });
 
 
-
-
-})();
