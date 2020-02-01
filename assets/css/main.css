@@ -1,30 +1,38 @@
+/*applies styling to all elements*/
 * {
   margin: 0;
+  padding: 0;
+  font-family: LoRes, sans-serif;
 }
+
+/*removes automated outline around button*/
 * *:focus {
   outline: none;
 }
 
+/*font face generates a font family that is locally stored to use on browser*/
 @font-face {
   font-family: LoRes;
   src: url("../fonts/LoRes12OT-BoldAltOakland.ttf");
 }
-#secondPicture {
 
+
+#secondPicture {
   width: 30%;
   margin-bottom: -10%;
   z-index: -2;
 }
+
 /* animation: dying of the pokemon after hit */
 @-webkit-keyframes die {
   from { width:100%; height:100%; transform:rotate(0deg); filter: opacity(1);}
-  to { width:0%; height: 0%; transform:rotate(360deg); filter: opacity(0.20);}
+  to { width:0; height: 0; transform:rotate(360deg); filter: opacity(0.20);}
 }
 @keyframes die { /*filter:blur(0px); */
   from { width:100%; height:100%; transform:rotate(0deg); filter: opacity(1);}
-  to { width:0%; height: 0%; transform:rotate(360deg); filter: opacity(0.20);}
+  to { width:0; height: 0; transform:rotate(360deg); filter: opacity(0.20);}
 }
-/* end animation dying */
+
 
 .text {
   display: inline-block;
@@ -32,8 +40,7 @@
   padding-inline: 10%;
   text-align: center;
   overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid black;
+
   /* The typwriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
@@ -69,10 +76,10 @@ h1 {
   text-align: center;
   margin-top: 5vmin;
   font-size: 2vw;
-  overflow: hidden;
+
   /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid rgba(0, 0, 0, 0);
-  /* The typwriter cursor */
+  overflow: hidden;
+  /* The typewriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
   /* Gives that scrolling effect as the typing happens */
@@ -91,7 +98,6 @@ h1 {
   width: 40%;
   height: 30%;
   border: none;
-  padding: 3vmin;
   display: block;
   background-image: url("../img/used/guessbtn_guess buttonn.svg");
   background-repeat: no-repeat;
@@ -413,7 +419,6 @@ section.fadeIn {
     background-color: rgba(148, 225, 255, 0);
     font-size: 2vw;
     background-position: center center;
-    font-family: LoRes, sans-serif;
     background-size: contain;
   }
   .guessPokemon .guess .hiddenPokemon {
@@ -426,4 +431,3 @@ section.fadeIn {
   }
 }
 
-/*# sourceMappingURL=main.css.map */
