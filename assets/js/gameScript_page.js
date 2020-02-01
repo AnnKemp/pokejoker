@@ -21,3 +21,17 @@ function myMove() {
     }
 }
 document.getElementById("myAnimation").style.display="none";
+/*
+document.getElementById("pokeball").addEventListener("click", function(){
+
+    document.getElementById("myAnimation").style.backgroundImage= url("../img/used/pokeball_pokeball.svg");
+    myMove()
+});
+document.getElementById("rock").addEventListener("click", function(){
+    document.getElementById("myAnimation").style.backgroundImage= url("../img/used/pokeball_pokeball.svg");
+    myMove()
+});
+document.getElementById("candy").addEventListener("click", function(){
+    myMove()
+    document.getElementById("myAnimation").style.backgroundImage= url("../img/used/pokeball_pokeball.svg");
+}); */

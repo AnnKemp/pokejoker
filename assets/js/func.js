@@ -1,4 +1,5 @@
 (() => {
+
     //--------------------------------------------- the intro screen ----------------------------------------------------------------------
     // the intro-screen:
     // hide page1
@@ -7,8 +8,10 @@
     // change the background picture to the pink bubbly one
     document.getElementsByTagName("body")[0].style.backgroundImage="url(https://i.pinimg.com/originals/31/22/9d/31229d5403b0065a7fb0d5fbb43e5c92.gif)";
 
-    // turn the background music on for the intro
-    const src="assets/sounds/pokeMusic.mp3";
+    // turn the background music on for the intro // wat nog niet lukte maar wél voor scherm2 ik geloof dat dat eerst een hele poos laad
+// en nu werkt het om geheimzinnige reden helemaal niet meer ga even iets anders doen
+
+    //const src="http://23.237.126.42/ost/pokemon-original-game-soundtrack/wahjdqip/101%20-%20opening.mp3";
 
     function sound(src) {
         this.sound = document.createElement("audio");
@@ -20,11 +23,14 @@
         this.play = function(){
             this.sound.play();
         }
-       // this.stop = function(){
-         //   this.sound.pause();
-      //  }
+        //this.stop = function(){
+        // this.sound.pause();
+        // }
     }
+
+    const src="assets/sounds/pokeMusic.mp3";
     sound(src);
+
     //-------------------------------------------- end intro screen --------------------------------------------------------------------------
 
     // add eventlistener on button and on click
@@ -38,12 +44,6 @@
         document.querySelector("#sectionIntro").style.display="none";
         // change the background image to the gray landscape
         document.getElementsByTagName("body")[0].style.backgroundImage="url(assets/img/used/bg_bg.svg)";
-
-    // schakelt het geluid uit
-
-    //const audio=document.getElementById("iframeAudio");
-   // audio.setAttribute("autoplay", "");
-   //audio.removeAttribute("autoplay");
  });
 
 let Name;
@@ -68,6 +68,10 @@ let Name;
 
           // compare if the name on the clicked button and the name of the pokemon are equal
         if(Name === ImageIndexName) {  // so Yes/true
+
+            // turn the background music on for page 2
+            //sound(src);
+
             document.getElementById("lala").innerHTML=" ";
             // adjust name of pokemon in the second screen
             document.querySelector("#pokeId").innerHTML=Name;
