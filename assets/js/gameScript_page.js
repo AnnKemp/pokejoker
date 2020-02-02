@@ -1,3 +1,4 @@
+// Javascript code voor animatie heen en weer van figure op pagina 2
 document.getElementById("secondPicture").style.animation = "pokeMove 2s alternate infinite";
 document.getElementById("secondPicture").style.WebkitAnimation = "pokeMove 2s alternate infinite"; // Code for Safari
 
@@ -28,7 +29,7 @@ function myMove() {  // move pokebal or candy or rock
             elem.style.left = pos + '5px';
         }
     }
-}t 
+}
 
 document.getElementById("myAnimation").style.display="none";
 
