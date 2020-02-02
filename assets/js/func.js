@@ -6,7 +6,8 @@
     document.querySelector(".guessPokemon").style.display='none';
 
     // change the background picture to the pink bubbly one
-    document.getElementsByTagName("body")[0].style.backgroundImage="url(https://i.pinimg.com/originals/31/22/9d/31229d5403b0065a7fb0d5fbb43e5c92.gif)";
+   // document.getElementsByTagName("body")[0].style.backgroundImage="url(https://i.pinimg.com/originals/31/22/9d/31229d5403b0065a7fb0d5fbb43e5c92.gif)";
+    document.getElementsByTagName("body")[0].style.backgroundImage="url('assets/img/used/animated_background.gif')";
 
     // turn the background music on for the intro // wat nog niet lukte maar wél voor scherm2 ik geloof dat dat eerst een hele poos laad
 // en nu werkt het om geheimzinnige reden helemaal niet meer ga even iets anders doen
