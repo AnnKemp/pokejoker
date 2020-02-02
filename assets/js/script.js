@@ -1,89 +1,97 @@
 (() => {
     // initialise vars
-    let ImageIndex=0;
+    let ImageIndex = 0;
     let randomSprite = [];
     const data = []; // constant array to save/keep all the feched data in from the first fetch to reuse x-times in the site/document
-    const keepImage=[]; // constant array to save/keep all the feched data in from the second fetch to reuse x-times in the site/document
+    const keepImage = []; // constant array to save/keep all the feched data in from the second fetch to reuse x-times in the site/document
 
     //fetch JSON
     async function getPokemon() {
-       try {
+        try {
 
-        //fetch stream of data 151 pokemons, starting at 0
-        const pokemonPlain = await fetch(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151`);
+            //fetch stream of data 151 pokemons, starting at 0
+            const pokemonPlain = await fetch(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151`);
 
-        //convert to json
-        const pObject = await pokemonPlain.json();
-        //console.log(pObject); // testing in the console
+            //convert to json
+            const pObject = await pokemonPlain.json();
+            console.log(pObject); // testing in the console
 
             // push the fetched data in the constant array to reuse and keep so you do not need to fetch X-times anymore
             data.push(pObject);
-            //console.log(data); // testing in the console
+            console.log(data); // testing in the console
 
-        // generate 4 random numbers to use as random id's to select 4 random pokemons
-         for (let i = 1; i <= 4; i++) {
-            randomSprite[i] = Math.floor(Math.random() * 151) + 1;     // returns a random integer from 1 to 151
-             //console.log(randomSprite[i]); // this works fine
-         }
+            // generate 4 random numbers to use as random id's to select 4 random pokemons
+            for (let i = 1; i < 5; i++) {
+                randomSprite[i] = Math.floor(Math.random() * 150) + 1;     // returns a random integer from 1 to 151
+                console.log(randomSprite[i]); // this works fine
+                if (randomSprite[i] == randomSprite[(i - 1)] || randomSprite[i] == randomSprite[(i - 2) || randomSprite[i] == randomSprite[(i - 3)]]) {
+                    i--
+                }
+                else if (randomSprite[1] == randomSprite[4]){
+                    i--
+                }
 
-         // select buttons to display 4 random pokemon names   ---this works!
-         for (let y = 0; y < 4; y++) {
-             //console.log(data[0].results[randomSprite[y + 1]].name);
-             document.querySelectorAll(".guessButton")[y].innerHTML = data[0].results[randomSprite[y + 1]].name;
-         }
+                }
 
-         // to generate a random number between 0 and 4 to select the random id of the image we are going to show
-        let randomGetal = Math.floor(Math.random() * 5); // this works fine!
+            // select buttons to display 4 random pokemon names   ---this works!
+            for (let y = 0; y < 4; y++) {
+                console.log(data[0].results[randomSprite[y + 1]].name);
+                document.querySelectorAll(".guessButton")[y].innerHTML = data[0].results[randomSprite[y + 1]].name;
+            }
 
-        if (randomGetal==0){  // the randomnumber must be from 1 to 5, zero is not allowed because than you can't get a pokemon picture
-             randomGetal=1;
-         }
-         ImageIndex = randomSprite[randomGetal]; // to select the random image to show from the four selected pokemons
-         ImageIndex=ImageIndex+1;  //there is a difference between de index of the first fetch (the names/id and the second fetch: the images, by doing +1 this index-difference dissapears
+            // to generate a random number between 0 and 4 to select the random id of the image we are going to show
+            let randomGetal = Math.floor(Math.random() * 5); // this works fine!
 
-           getPokemonImage(ImageIndex);
+            if (randomGetal == 0) {  // the randomnumber must be from 1 to 5, zero is not allowed because than you can't get a pokemon picture
+                randomGetal = 1;
+            }
+            ImageIndex = randomSprite[randomGetal]; // to select the random image to show from the four selected pokemons
+            ImageIndex = ImageIndex + 1;  //there is a difference between de index of the first fetch (the names/id and the second fetch: the images, by doing +1 this index-difference dissapears
 
-         } catch (error) {
-        console.log("error by fetching the name- and id-data");
+            getPokemonImage(ImageIndex);
+
+        } catch (error) {
+            console.log("error by fetching the name- and id-data");
+        }
     }
-}
+
 //--------------------------------------------end of asynchron function one ------------------------------------------------------------------------------------------
-getPokemon(); // call the function
+    getPokemon(); // call the function
 
     async function getPokemonImage(name) {
-       try {
-             //fetch stream of data to get the images
+        try {
+            //fetch stream of data to get the images
             const pokemonImage = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
             const pImage = await pokemonImage.json();
 
-           //console.log(pImage.sprites.front_default);  // this works
-           //console.log(pImage.name);  // testing
-           //console.log(pImage.id);   // testing
+            //console.log(pImage.sprites.front_default);  // this works
+            //console.log(pImage.name);  // testing
+            //console.log(pImage.id);   // testing
 
-           // fill a constant array to keep/save the data so you don't need to fetch x-times anymore, only one time a day
-                keepImage.push(pImage);
-               // console.log(keepImage[0].name);  // testing . . .
-                let imageName=keepImage[0].name;
+            // fill a constant array to keep/save the data so you don't need to fetch x-times anymore, only one time a day
+            keepImage.push(pImage);
+            // console.log(keepImage[0].name);  // testing . . .
+            let imageName = keepImage[0].name;
 
             // show the images corresponding to the name and id in the html
-           document.getElementsByClassName("PokemonIcon")[0].src= keepImage[0].sprites.front_default;
-           document.getElementsByClassName("PokemonIcon")[1].src= keepImage[0].sprites.front_default;
-          // document.querySelector(".PokemonIcon").src = pImage.sprites.front_default;    // this works! but not for more then one!
+            document.getElementsByClassName("PokemonIcon")[0].src = keepImage[0].sprites.front_default;
+            document.getElementsByClassName("PokemonIcon")[1].src = keepImage[0].sprites.front_default;
+            // document.querySelector(".PokemonIcon").src = pImage.sprites.front_default;    // this works! but not for more then one!
 
-        //interchanging data between js-pages
-           // Check browser support
-        if (typeof(Storage) !== "undefined") {
-            // Store data in session to use on func.js
-            sessionStorage.setItem("nameImage", imageName);
-        } else {
-           alert("Sorry, your browser does not support Web Storage...");
-        }
-
-
-   } catch (error) {
-         console.log("error by fetching the image-data or selecting the image out of the data to show it in the html");
+            //interchanging data between js-pages
+            // Check browser support
+            if (typeof (Storage) !== "undefined") {
+                // Store data in session to use on func.js
+                sessionStorage.setItem("nameImage", imageName);
+            } else {
+                alert("Sorry, your browser does not support Web Storage...");
             }
+
+
+        } catch (error) {
+            console.log("error by fetching the image-data or selecting the image out of the data to show it in the html");
         }
+    }
 
     /* todo list
     // het vergelijken of er twee van die 4 randomwaarden hetzelfde zijn heb ik nog niet gedaan
