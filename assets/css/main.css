@@ -12,8 +12,9 @@
 /* de pokemonprent op pagina 2 */
 #secondPicture {
   width: 30%;
-  margin-bottom:0%;
+  top:0;
   z-index: -2;
+  position: absolute;
 }
 /* animation: dying of the pokemon after hit */
 @-webkit-keyframes die {
@@ -28,12 +29,12 @@
 
 /* animation: pokemon running from left to right on page2*/
 @keyframes pokeMove{
-  from {margin-left:90%; width:60%;}
-  to {margin-left:0%; width:30%;}
+  from {left:50%; width:60%;}
+  to {left:90%; width:30%;}
 }
 @-webkit-keyframes pokeMove{
-  from {margin-left:90%; width: 60%;}
-  to {margin-left:0%; width:30%;}
+  from {left:50%; width: 60%;}
+  to {left:90%; width:30%;}
 }
 /* end running animation */
 
@@ -52,12 +53,13 @@
   /* Adjust as needed */
   animation: typing1 8s;
 }
-
+/* to sharpen the edges of the images */
 img {
   image-rendering: crisp-edges;
   image-rendering: pixelated;
 }
 #pokeball, #candy, #rock{
+
   display: inline-block;
   font-family: LoRes, sans-serif;
   text-align: center;
@@ -161,8 +163,7 @@ h1 {
   margin-left: 10%;
 }
 .guessPokemon .whichPokemon {
-  grid-column: 1/2;
-  grid-row: 1/3;
+
 }
 .guessPokemon .whichPokemon .questionMark {
   font-size: 29vw;
@@ -172,8 +173,7 @@ h1 {
 }
 .guessPokemon .guess {
   margin-top: 20%;
-  grid-column: 2/3;
-  grid-row: 1/3;
+
   display: block;
   justify-content: center;
   -webkit-transform: scale(1);
@@ -197,8 +197,7 @@ h1 {
 }
 .guessPokemon .guess .hiddenPokemon {
   margin-top: 40%;
-  grid-column: 3/4;
-  grid-row: 1/3;
+
   justify-content: space-around;
 }
 
@@ -209,18 +208,20 @@ h1 {
   margin-bottom: 6vmin;
 }
 .catchPokemon h1 {
-  grid-column: 1/3;
+
   display: block;
 }
 .catchPokemon #ashIcon {
-  width: 30%;
-  grid-column: 1/2;
-  margin-left: 65%;
+  width: 12%;
+ /* grid-column: 1/2; */
+  position: absolute;
+  left: 25%;
+  top:25%;
   z-index: -2;
 }
 .catchPokemon .PokemonIcon {
   width: 30%;
-  grid-column: 2/3;
+
 }
 .catchPokemon #fightItem {
   visibility: hidden;
@@ -256,7 +257,7 @@ h1 {
 }
 .catchIt .textMenu .menuText button {
   border: none;
-  background: none;
+  background-color:white;
   font-family: "LoRes 12 OT", sans-serif;
   display: block;
   padding: 1vh;
@@ -326,7 +327,7 @@ button:hover {
 
 #pokeball {
   margin-top: 10%;
-  text-decoration: none;
+ /* text-decoration: none;*/
   border-style: none;
 }
 
@@ -427,8 +428,7 @@ section.fadeIn {
   }
   .guessPokemon .guess .hiddenPokemon {
     margin-top: 40%;
-    grid-column: 3/4;
-    grid-row: 1/3;
+
     justify-content: space-around;
     display: block;
     position: relative;
