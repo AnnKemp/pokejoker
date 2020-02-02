@@ -1,3 +1,6 @@
+document.getElementById("secondPicture").style.animation = "pokeMove 2s alternate infinite";
+document.getElementById("secondPicture").style.WebkitAnimation = "pokeMove 2s alternate infinite"; // Code for Safari
+
 function myMove() {  // move pokebal or candy or rock
 
     var elem = document.getElementById("myAnimation");
@@ -5,19 +8,13 @@ function myMove() {  // move pokebal or candy or rock
     var id = setInterval(frame, 19);
     document.getElementById("myAnimation").style.display="block";
     function frame() {
-        if (pos == 25) {
+        if (pos == 25) { // when on the same place ball and pokemon . . .
             // remove interval
             clearInterval(id);
 
-            // make pokemon dissapear
-            //wordt zoiets
-           // document.getElementById("secondPicture").style.transition = "all 2s";
-
-            // call 'die' in the css and start the animation
+            // call 'die' in the css and start the animation  // make pokemon dissapear
             document.getElementById("secondPicture").style.animation = "die 2s ease-in";
             document.getElementById("secondPicture").style.WebkitAnimation = "die 2s ease-in"; // Code for Safari 4.0 - 8.0
-
-            //document.getElementById("secondPicture").rotate(20 * Math.PI / 180);
 
             //animation of the ball or candy or rock
 
@@ -29,14 +26,11 @@ function myMove() {  // move pokebal or candy or rock
             // bal moves to the right
             pos++;
             elem.style.left = pos + '5px';
-
         }
     }
-}
+}t 
 
 document.getElementById("myAnimation").style.display="none";
-
-
 
 // onclick on word/name change throw-item into bal or candy or rock and start function myMove
 
@@ -44,7 +38,7 @@ document.getElementById("pokeball").addEventListener("click", function(){
 
     document.getElementById("myAnimation").style.backgroundImage= "url('assets/img/used/pokeball_pokeball.svg')";
     myMove();
-});
+    });
 document.getElementById("rock").addEventListener("click", function(){
     document.getElementById("myAnimation").style.backgroundImage= "url('assets/img/used/rock.png')";
     myMove();
