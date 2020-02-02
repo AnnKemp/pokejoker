@@ -11,10 +11,11 @@
 }
 /* de pokemonprent op pagina 2 */
 #secondPicture {
-  width: 30%;
-  top:0;
+  width: 5%;
+  top:-500px;
   z-index: -2;
   position: absolute;
+
 }
 /* animation: dying of the pokemon after hit */
 @-webkit-keyframes die {
@@ -29,11 +30,11 @@
 
 /* animation: pokemon running from left to right on page2*/
 @keyframes pokeMove{
-  from {left:50%; width:60%;}
+  from {left:30%; width:60%;}
   to {left:90%; width:30%;}
 }
 @-webkit-keyframes pokeMove{
-  from {left:50%; width: 60%;}
+  from {left:30%; width: 60%;}
   to {left:90%; width:30%;}
 }
 /* end running animation */
@@ -208,6 +209,13 @@ h1 {
 
   justify-content: space-around;
 }
+/*-------------------------------------------------------------------- pagina 2 - the game -------------------------------------------------------*/
+
+#pokeId{
+top:30px;
+  position:fixed;
+  border: red solid 1px;
+}
 
 .catchPokemon {
   width: 90%;
@@ -219,12 +227,13 @@ h1 {
 
   display: block;
 }
+/*  <section class="catchPokemon">
+<img src="assets/img/used/ash_ash.svg" alt="guessPokeIcon" id="ashIcon"*/
 .catchPokemon #ashIcon {
-  width: 12%;
- /* grid-column: 1/2; */
+  width: 150px;
   position: absolute;
-  left: 25%;
-  top:25%;
+  left: 33%;
+  top:-50px;
   z-index: -2;
 }
 .catchPokemon .PokemonIcon {
@@ -248,14 +257,19 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+/*  the box from the game page where all the info displays  */
 .catchIt .textMenu {
-  margin-top: -12vmin;
+  position: absolute;
+  top: 68px;
+  height: 200px;
   width: 90vmin;
   background-image: url("../img/used/guessbtn_guess buttonn.svg");
   background-position: center;
   background-repeat: no-repeat;
   justify-content: center;
 }
+/* https://www.w3schools.com/cssref/css_units.asp
+<section class="textMenu"> <div  class="menuText"> */
 .catchIt .textMenu .menuText {
   text-align: left;
   margin-left: 30vmin;
@@ -322,7 +336,7 @@ button:hover {
 button:hover {
   cursor: pointer;
 }
-
+/* to animate the pokeball - candy - stone */
 #myAnimation {
   width: 10%;
   height: 10%;
@@ -456,6 +470,11 @@ p.questionMark {
   }
   /*---------------------------------------------------------------the game page --------------------------------------------------------*/
 
+
+
+
+
+
 }
 
-/*# sourceMappingURL=main.css.map */
+
