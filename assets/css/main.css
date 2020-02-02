@@ -106,7 +106,6 @@ h1 {
 
 /*styling guess page*/
 .guessPokemon {
-  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,9 +142,8 @@ h1 {
 }
 .guessPokemon .guess .guessButton {
   width: 100%;
-  height: 30%;
   border: none;
-  padding: 3vmin;
+  padding: 3vh;
   display: block;
   background-image: url("../img/used/guessbtn_guess buttonn.svg");
   background-repeat: no-repeat;
@@ -153,13 +151,7 @@ h1 {
   font-size: 2vw;
   background-position: center center;
   font-family: LoRes, sans-serif;
-  background-size: contain;
-}
-.guessPokemon .guess .hiddenPokemon {
-  margin-top: 40%;
-  grid-column: 3/4;
-  grid-row: 1/3;
-  justify-content: space-around;
+
 }
 
 /*styling catch page*/
@@ -313,7 +305,7 @@ button:hover {
 /*-----------mobile media query-------------*/
 @media only screen and (max-width: 600px) {
 
-  #introTitle{
+#introTitle{
     font-size: 12vw;
   }
   .Intro #introButton{
@@ -322,30 +314,35 @@ button:hover {
     margin-left: 20%;
     font-size: 5vw;
   }
-  .guessPokemon {
-    height: 100vh;
-    align-items: center;
-    justify-content: space-around;
-    transition: opacity 0.5s ease;
-    display: block;
-  }
-  .guessPokemon .hiddenPokemon #hidePokemon {
-    width: 50%;
-    filter: brightness(0);
-    position: static;
-    margin: auto;
-    display: block;
-  }
+
+  /*styling question mark and section that contains it*/
   .guessPokemon .whichPokemon {
+
     display: block;
     margin: auto;
   }
   .guessPokemon .whichPokemon .questionMark {
+    margin-top: 2vh;
     position: static;
     font-size: 10vh;
     text-align: center;
   }
+
+  /*styling pokemon image and section that contains it*/
+  .hiddenPokemon{
+    margin-top: -5vh;
+    width: 60%;
+  }
+  .guessPokemon .hiddenPokemon #hidePokemon {
+    width:100%;
+    position: static;
+    margin: auto;
+    display: block;
+  }
+
+  /*styling guess buttons and section that contains them*/
   .guessPokemon .guess {
+    margin-top: -2vh;
     display: block;
     justify-content: center;
     -webkit-transform: scale(1);
@@ -354,25 +351,7 @@ button:hover {
     transition: 0.3s ease-in-out;
   }
   .guessPokemon .guess .guessButton {
-    width: 100%;
-    height: 30%;
-    border: none;
-    padding: 3vmin;
-    display: block;
-    background-image: url("../img/used/guessbtn_guess buttonn.svg");
-    background-repeat: no-repeat;
-    background-color: rgba(148, 225, 255, 0);
-    font-size: 2vw;
-    background-position: center center;
-    background-size: contain;
-  }
-  .guessPokemon .guess .hiddenPokemon {
-    margin-top: 40%;
-    grid-column: 3/4;
-    grid-row: 1/3;
-    justify-content: space-around;
-    display: block;
-    position: relative;
+
   }
 }
 
