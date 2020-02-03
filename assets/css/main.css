@@ -9,10 +9,16 @@
   font-family: LoRes;
   src: url("../fonts/LoRes12OT-BoldAltOakland.ttf");
 }
+/* text on the top of the page of game */
+p.catchText{
+  margin-top:-380px;
+  font-size: 2em;
+  width:90%;
+  text-align: center;
+}
 /* de pokemonprent op pagina 2 */
-#secondPicture {
-  width: 5%;
-  top:-500px;
+ #secondPicture {
+  top:-230px;
   z-index: -2;
   position: absolute;
 
@@ -30,12 +36,12 @@
 
 /* animation: pokemon running from left to right on page2*/
 @keyframes pokeMove{
-  from {left:30%; width:60%;}
-  to {left:90%; width:30%;}
+  from {left:40%; width:30%;}
+  to {left:100%; width:10%;}
 }
 @-webkit-keyframes pokeMove{
-  from {left:30%; width: 60%;}
-  to {left:90%; width:30%;}
+  from {left:40%; width: 30%;}
+  to {left:100%; width:10%;}
 }
 /* end running animation */
 
@@ -71,7 +77,6 @@ body {
   overflow: hidden;
   font-family: LoRes, sans-serif;
   background-image: url("../img/used/bg_bg.svg");
-  /*background-image: url("../img/used/animated_background.gif"); */
   background-repeat: no-repeat;
   height: 100vh;
   background-color: #9A9A9A;
@@ -79,11 +84,8 @@ body {
   font-style: normal;
   font-weight: 100;
 }
-.body{
-  /*filter: grayscale(100%);*/
-}
 
-h1 {
+ h1 {
   text-align: center;
   margin-top: 5vmin;
   font-size: 2vw;
@@ -211,16 +213,8 @@ h1 {
 }
 /*-------------------------------------------------------------------- pagina 2 - the game -------------------------------------------------------*/
 
-#pokeId{
-top:30px;
-  position:fixed;
-  border: red solid 1px;
-}
-
 .catchPokemon {
   width: 90%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   margin-bottom: 6vmin;
 }
 .catchPokemon h1 {
@@ -238,7 +232,6 @@ top:30px;
 }
 .catchPokemon .PokemonIcon {
   width: 30%;
-
 }
 .catchPokemon #fightItem {
   visibility: hidden;
@@ -279,16 +272,51 @@ top:30px;
 }
 .catchIt .textMenu .menuText button {
   border: none;
-  background-color:white;
-  font-family: "LoRes 12 OT", sans-serif;
+  background-color: none;
+  font-family:inherit;
   display: block;
   padding: 1vh;
   font-size: 2.5vmin;
 }
+#headerTitle{
+  position: absolute;
+  top:20px;
+  left:20px;
+  font-size: 1.6em;
+  text-align: center;
+  width:100%;
+}
+div.chooseItem{
+border: 1px red solid;
+  width: 90%;
+}
+button.button{
+  width: 30%;
+  background-color: none;
+}
+p#insultText{
+  position: absolute;
+  margin-top: 50px;
+  left:30%;
+  font-size: 2em;
+  text-align:center;
+  width: 100%;
+}
+p#jokeText{
+  position: absolute;
+  margin-top: 50px;
+  left:30%;
+  font-size: 1em;
+  text-align:center;
+  width: 100%;
+  display: none;
+  /*text-align: justify;*/
+}
 .catchText{
-  margin-top: -2%;
-  margin-left: -20%;
+  top: 60px;
+  margin-left:auto;
   margin-right: auto;
+  position: absolute;
 }
 
 /*animation for buttons*/
@@ -399,7 +427,153 @@ section.fadeIn {
     transform: translateY(-50px);
   }
 }
+/*----------------------------------------------------------------max-width: 1198px-------------------------------------------------------*/
+@media only screen and (max-width: 1198px) {
 
+  /*  <section class="catchPokemon">
+<img src="assets/img/used/ash_ash.svg" alt="guessPokeIcon" id="ashIcon"*/
+  section.catchPokemon img#ashIcon {
+    width: 150px;
+    position: absolute;
+    left:26%;
+    top:-50px;
+    z-index: -2;
+
+  }
+}
+/*----------------------------------------------------------------max-width: 864px-------------------------------------------------------*/
+@media only screen and (max-width: 864px) {
+
+  /* the intro page */
+  #introSentence{
+    font-size: 4vw;
+    margin-top: 10px;
+  }
+  #sectionIntro .intro_Button
+  {
+    width: 100%;
+    height:100px;
+    font-size: 4vw;
+  }
+  /* -------------------------------------------------------------intro end-----------------------------------------------------------------*/
+  /*----------------------------------------------------------------the guess-page--------------------------------------------------------*/
+  /* the frame which contains the
+   content */
+  .guessPokemon {
+    transition: opacity 0.5s ease;
+  }
+  /* the animated sentence on the top */
+  #lala{
+    font-size: 5vw;
+  }
+
+  /* the black poke image on page one*/
+  img#hidePokemon {
+
+    left:50%;
+    /* de grootte van die pokemon aanpassen moet nog gebeuren */
+    height:250px;
+    width:250px;
+    filter: brightness(0);
+    position: static;
+    margin-top: 0;
+
+  }
+  .guessPokemon .whichPokemon {
+    display: block;
+    margin: auto;
+  }
+  /* this is the questionmark */
+  p.questionMark {
+    position: static;
+    font-size:200px;
+    left:10px;
+    text-align: center;
+
+  }
+  /* the element around the four buttons */
+  .guessPokemon .guess {
+    margin-top: 40%;
+    justify-content: center;
+    width:90%;
+
+    /* the 4 buttons */
+  }
+  .guessPokemon .guess .guessButton {
+    width: 100%;
+    height:80px;
+    border: none;
+    padding: 3vmin;
+    display: block;
+    background-image: url("../img/used/guessbtn_guess buttonn.svg");
+    background-repeat: no-repeat;
+    background-color: rgba(148, 225, 255, 0);
+    font-size: 5vw;
+    background-position: center center;
+    font-family: LoRes, sans-serif;
+    background-size: contain;
+  }
+  /* de pokemonprent op pagina 2 */
+  #secondPicture {
+    width: 50%;
+    top:-200px;
+    z-index: -2;
+    position: absolute;
+  }
+
+  /* animation: pokemon running from left to right on page2*/
+  @keyframes pokeMove{
+    from {left:30%; width:60%;}
+    to {left:85%; width:30%;}
+  }
+  @-webkit-keyframes pokeMove{
+    from {left:30%; width: 60%;}
+    to {left:85%; width:30%;}
+  }
+  section.catchPokemon img#ashIcon {
+    width: 150px;
+    position: absolute;
+    left:20%;
+    top:-38px;
+    z-index: -2;
+
+  }
+  /* text on the top of the page of game */
+  p.catchText{
+    margin-top:-390px;
+  }
+  /*<div class="chooseItem">
+   <button id="pokeball" class="button">pokeball</button>
+   <div id ="myAnimation"></div>
+  <button id="rock" class="button">rock</button>*/
+  div.chooseItem{
+    margin-top: 20px;
+  }
+  div.chooseItem button.button {
+    font-size:20px;
+
+  }
+
+  p#insultText{
+    margin-top: 66px;
+    margin_left:1%;
+    text-align: center;
+  }
+  p#jokeText{
+    margin_left:1%;
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    display: none;
+    text-align: justify;
+  }
+  /*<section class="insult">
+  <p id="insultText" class="text"></p>
+   <p id="jokeText" class="text"></p>
+    <section class="compliment">
+   <p id="complimentText" class="text"></p>*/
+
+}
 /*----------------------------------------------------------------version for phone-------------------------------------------------------*/
 @media only screen and (max-width: 600px) {
 /* the intro page */
@@ -425,14 +599,13 @@ section.fadeIn {
 
   /* the black poke image on page one*/
   img#hidePokemon {
+
+    left:25%;
     width:100%;
-    left:50%;
-    /* de grootte van die pokemon aanpassen moet nog gebeuren */
-    height: 250px;
     filter: brightness(0);
     position: static;
     margin-top: 0;
-    display: block;
+
   }
   .guessPokemon .whichPokemon {
     display: block;
@@ -442,7 +615,7 @@ section.fadeIn {
 p.questionMark {
     position: static;
   font-size:200px;
-    left:10px;
+    right:-200px;
     text-align: center;
 
   }
@@ -469,9 +642,104 @@ p.questionMark {
     background-size: contain;
   }
   /*---------------------------------------------------------------the game page --------------------------------------------------------*/
+ /* title at the top*/
+  p.catchText{
+    position: absolute;
+    margin-top:20px;
+  }
 
+  /* de pokemonprent op pagina 2 */
+  #secondPicture {
+    width: 50%;
+    top:-200px;
+    z-index: -2;
+    position: absolute;
+  }
 
+  /* animation: pokemon running from left to right on page2*/
+  @keyframes pokeMove{
+    from {left:30%; width:60%;}
+    to {left:85%; width:30%;}
+  }
+  @-webkit-keyframes pokeMove{
+    from {left:30%; width: 60%;}
+    to {left:85%; width:30%;}
+  }
+  /* end running animation */
+  /*                                             */
+  section.catchPokemon img#ashIcon {
+      width: 150px;
+      position: absolute;
+      left:12%;
+      top:-90px;
+      z-index: -2;
 
+    }
+  /*  the box from the game page where all the info displays  */
+  .catchIt .textMenu {
+    position: absolute;
+    top: 0px;
+    height: 200px;
+    width: 90vmin;
+    background-image: url("../img/used/guessbtn_guess buttonn.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+
+  }
+/* text on the top of the page of game */
+  p.catchText{
+    margin-top:-380px;
+  }
+  #headerTitle{
+    position: absolute;
+    margin-top: 35px;
+    left:20%;
+    font-size:1em;
+
+  }
+/*<div class="chooseItem">
+ <button id="pokeball" class="button">pokeball</button>
+ <div id ="myAnimation"></div>
+<button id="rock" class="button">rock</button>*/
+div.chooseItem{
+  position: absolute;
+  width:90% ;
+ padding-top:0;
+  margin-top: 50px;
+  left:5%;
+  right:5%;
+  border:red solid 1px;
+  background-color: none;
+}
+div.chooseItem button.button {
+  font-size:20px;
+  width:30% ;
+  background-color: none;
+  text-align: center;
+border:solid 1px crimson;
+  }
+p#insultText{
+  position: absolute;
+  margin-top: 65px;
+  left:50%;
+  text-align: center;
+  font-size: 1.5em;
+}
+  p#jokeText{
+    position: absolute;
+    margin-top: 65px;
+    left:50%;
+    text-align: center;
+    font-size: 1.5em;
+  display: none;
+    /*text-align: justify;*/
+  }
+/*<section class="insult">
+<p id="insultText" class="text"></p>
+ <p id="jokeText" class="text"></p>
+  <section class="compliment">
+ <p id="complimentText" class="text"></p>*/
 
 
 
