@@ -22,8 +22,16 @@
 
         // generate 4 random numbers to use as random id's to select 4 random pokemons
          for (let i = 1; i <= 4; i++) {
-            randomSprite[i] = Math.floor(Math.random() * 151) + 1;     // returns a random integer from 1 to 151
+            randomSprite[i] = Math.floor(Math.random() * 150) + 1;     // returns a random integer from 1 to 151
              //console.log(randomSprite[i]); // this works fine
+             if (randomSprite[i] == randomSprite[(i - 1)] || randomSprite[i] == randomSprite[(i - 2) || randomSprite[i] == randomSprite[(i - 3)]]) {
+                 //randomSprite[i] = Math.floor(Math.random() * 150) + 1;
+                 console.log("double");
+                 i--
+             }
+             else if (randomSprite[1] == randomSprite[4]){
+                 i--
+             }
          }
 
          // select buttons to display 4 random pokemon names   ---this works!
