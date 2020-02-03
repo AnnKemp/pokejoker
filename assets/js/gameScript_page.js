@@ -16,10 +16,14 @@ function myMove() {  // move pokebal or candy or rock
             // call 'die' in the css and start the animation  // make pokemon dissapear
             document.getElementById("secondPicture").style.animation = "die 2s ease-in";
             document.getElementById("secondPicture").style.WebkitAnimation = "die 2s ease-in"; // Code for Safari 4.0 - 8.0
+            // hide weapons
             document.getElementsByClassName("chooseItem")[0].style.display = "none";
+            // hide pokemon-name-sentence
+            document.getElementById("headerTitle").style.display="none";
+            // show joke
             document.getElementById("jokeText").style.display="block";
 
-            // let the image dissapear after animation
+            // let the pokemon dissapear after die-animation
             document.getElementById("secondPicture").addEventListener("animationend", function() {
                 document.getElementById("secondPicture").style.display="none";
             });
