@@ -16,6 +16,8 @@ function myMove() {  // move pokebal or candy or rock
             // call 'die' in the css and start the animation  // make pokemon dissapear
             document.getElementById("secondPicture").style.animation = "die 2s ease-in";
             document.getElementById("secondPicture").style.WebkitAnimation = "die 2s ease-in"; // Code for Safari 4.0 - 8.0
+            document.getElementsByClassName("chooseItem")[0].style.display = "none";
+            document.getElementById("jokeText").style.display="block";
 
             //animation of the ball or candy or rock
 
