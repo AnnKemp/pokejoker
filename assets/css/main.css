@@ -264,7 +264,7 @@ body {
 /* https://www.w3schools.com/cssref/css_units.asp
 <section class="textMenu"> <div  class="menuText"> */
 .catchIt .textMenu .menuText {
-  text-align: left;
+  text-align: center;
   margin-left: 30vmin;
   margin-top: 5vmin;
   width: 70%;
@@ -272,11 +272,11 @@ body {
 }
 .catchIt .textMenu .menuText button {
   border: none;
-  background-color: none;
+  background-color:transparent;
   font-family:inherit;
   display: block;
   padding: 1vh;
-  font-size: 2.5vmin;
+  font-size:1em;
 }
 #headerTitle{
   position: absolute;
@@ -287,16 +287,21 @@ body {
   width:100%;
 }
 div.chooseItem{
-border: 1px red solid;
+  position: absolute;
   width: 90%;
+  font-size: 1em;
+  top:30px;
+  left: 0;
+  background-color:transparent;
 }
 button.button{
+  font-size: 1em;
   width: 30%;
-  background-color: none;
+  background-color:transparent;
 }
 p#insultText{
   position: absolute;
-  margin-top: 50px;
+  top: 90px;
   left:30%;
   font-size: 2em;
   text-align:center;
@@ -310,7 +315,7 @@ p#jokeText{
   text-align:center;
   width: 100%;
   display: none;
-  /*text-align: justify;*/
+
 }
 .catchText{
   top: 60px;
@@ -493,7 +498,7 @@ section.fadeIn {
   }
   /* the element around the four buttons */
   .guessPokemon .guess {
-    margin-top: 40%;
+    margin-top: 30%;
     justify-content: center;
     width:90%;
 
@@ -555,23 +560,19 @@ section.fadeIn {
   }
 
   p#insultText{
-    margin-top: 66px;
+    position: absolute;
+    top:80px;
     margin_left:1%;
     text-align: center;
   }
   p#jokeText{
-    margin_left:1%;
+    margin_left:30%;
     margin-top: 10px;
-    width: 100%;
+    width: auto;
     height: 30px;
     display: none;
-    text-align: justify;
+    text-align: center;
   }
-  /*<section class="insult">
-  <p id="insultText" class="text"></p>
-   <p id="jokeText" class="text"></p>
-    <section class="compliment">
-   <p id="complimentText" class="text"></p>*/
 
 }
 /*----------------------------------------------------------------version for phone-------------------------------------------------------*/
@@ -621,7 +622,7 @@ p.questionMark {
   }
   /* the element around the four buttons */
   .guessPokemon .guess {
-    margin-top: 50%;
+    margin-top: 40%;
     justify-content: center;
     width:90%;
 
@@ -693,56 +694,44 @@ p.questionMark {
   }
   #headerTitle{
     position: absolute;
-    margin-top: 35px;
-    left:20%;
+    margin-top: 55px;
+    text-align: center;
+    left:0;
     font-size:1em;
-
   }
-/*<div class="chooseItem">
- <button id="pokeball" class="button">pokeball</button>
- <div id ="myAnimation"></div>
-<button id="rock" class="button">rock</button>*/
-div.chooseItem{
+
+  div.chooseItem{
   position: absolute;
-  width:90% ;
- padding-top:0;
-  margin-top: 50px;
-  left:5%;
-  right:5%;
-  border:red solid 1px;
-  background-color: none;
-}
-div.chooseItem button.button {
-  font-size:20px;
-  width:30% ;
-  background-color: none;
-  text-align: center;
-border:solid 1px crimson;
+ width: 90%;
+ font-size: 1em;
+ top:30px;
+    left:0;
+ background-color:transparent;
+  }
+
+  button.button{
+    font-size: 1em;
+    width: 30%;
+    background-color:transparent;
   }
 p#insultText{
   position: absolute;
-  margin-top: 65px;
-  left:50%;
+  top: 40px;
+ left:30%;
+  width: 100%;
   text-align: center;
   font-size: 1.5em;
 }
   p#jokeText{
     position: absolute;
+    width: auto;
     margin-top: 65px;
-    left:50%;
+    left:30%;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 0.9em;
   display: none;
-    /*text-align: justify;*/
+   /
   }
-/*<section class="insult">
-<p id="insultText" class="text"></p>
- <p id="jokeText" class="text"></p>
-  <section class="compliment">
- <p id="complimentText" class="text"></p>*/
-
-
-
 }
 
 
