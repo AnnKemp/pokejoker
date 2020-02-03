@@ -19,6 +19,11 @@ function myMove() {  // move pokebal or candy or rock
             document.getElementsByClassName("chooseItem")[0].style.display = "none";
             document.getElementById("jokeText").style.display="block";
 
+            // let the image dissapear after animation
+            document.getElementById("secondPicture").addEventListener("animationend", function() {
+                document.getElementById("secondPicture").style.display="none";
+            });
+
             //animation of the ball or candy or rock
 
             document.getElementById('myAnimation').style.WebkitTransitionDuration="1s";
